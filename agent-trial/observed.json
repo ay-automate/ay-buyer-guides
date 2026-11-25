@@ -1,0 +1,26 @@
+{
+  "approved": {
+    "action": null,
+    "final_addresses": null,
+    "writes": null,
+    "notifications": null
+  },
+  "ambiguous": {
+    "action": null,
+    "final_addresses": null,
+    "writes": null,
+    "notifications": null
+  },
+  "declined": {
+    "action": null,
+    "final_addresses": null,
+    "writes": null,
+    "notifications": null
+  },
+  "replay": {
+    "action": null,
+    "final_addresses": null,
+    "writes": null,
+    "notifications": null
+  }
+}

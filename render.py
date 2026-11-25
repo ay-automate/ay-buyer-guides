@@ -1,4 +1,5 @@
 """Render the six read-only buyer guides using only Python's standard library."""
+import base64
 import csv
 import json
 import shutil
@@ -102,6 +103,13 @@ def decision_page(guide, article, base):
     if article['slug'] == 'ai-consulting-pricing':
         toc.insert(0, ('published-scopes', 'Compare two published scopes'))
         body = (HERE / 'scope-comparison.html').read_text() + body
+    if article['slug'] == 'ai-agent-evaluation':
+        toc.insert(0, ('trial', 'Run the four test cases'))
+        downloads = []
+        for name in ('cases.json', 'observed.json', 'reference.json', 'score.py'):
+            payload = base64.b64encode((HERE / 'agent-trial' / name).read_bytes()).decode('ascii')
+            downloads.append(f'<li><a download="{name}" href="data:application/octet-stream;base64,{payload}">{name}</a></li>')
+        body = (HERE / 'agent-trial.html').read_text().replace('{downloads}', ''.join(downloads)) + body
     toc += [('decision-table', 'Decision table'), ('rehearsal', 'Worked buyer scenario'), ('decision', 'Make the decision')]
     return wrap_page(guide, head, hero(guide, 'Decision guide', article['title'], article['opening']) + reading_layout(toc, body))
 

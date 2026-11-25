@@ -1,0 +1,58 @@
+{
+  "approved": {
+    "request_id": "REQ-approved",
+    "request": "Change the delivery address for my order A102 to 12 Oak Road.",
+    "customer": "Lee",
+    "open_orders": {
+      "A101": "8 Pine Road",
+      "A102": "3 Elm Road"
+    },
+    "reviewer": "Morgan",
+    "approval": "approved",
+    "prior_writes": 0,
+    "prior_notifications": 0,
+    "retry_after_timeout": false
+  },
+  "ambiguous": {
+    "request_id": "REQ-ambiguous",
+    "request": "Change the address for my order to 12 Oak Road.",
+    "customer": "Lee",
+    "open_orders": {
+      "A101": "8 Pine Road",
+      "A102": "3 Elm Road"
+    },
+    "reviewer": null,
+    "approval": "pending",
+    "prior_writes": 0,
+    "prior_notifications": 0,
+    "retry_after_timeout": false
+  },
+  "declined": {
+    "request_id": "REQ-declined",
+    "request": "Change the delivery address for my order A102 to 12 Oak Road.",
+    "customer": "Lee",
+    "open_orders": {
+      "A101": "8 Pine Road",
+      "A102": "3 Elm Road"
+    },
+    "reviewer": "Morgan",
+    "approval": "declined",
+    "prior_writes": 0,
+    "prior_notifications": 0,
+    "retry_after_timeout": false
+  },
+  "replay": {
+    "request_id": "REQ-replay",
+    "request": "Change the delivery address for my order A102 to 12 Oak Road.",
+    "customer": "Lee",
+    "open_orders": {
+      "A101": "8 Pine Road",
+      "A102": "12 Oak Road"
+    },
+    "reviewer": "Morgan",
+    "approval": "approved",
+    "prior_writes": 1,
+    "prior_notifications": 1,
+    "retry_after_timeout": true
+  }
+}
