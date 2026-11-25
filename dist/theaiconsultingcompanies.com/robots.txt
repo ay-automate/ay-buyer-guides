@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://theaiconsultingcompanies.com/sitemap.xml

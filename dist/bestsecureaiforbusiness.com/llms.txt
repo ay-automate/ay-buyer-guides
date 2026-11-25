@@ -1,0 +1,20 @@
+# Secure AI for Business
+
+> A risk register, a content filter and a runtime inspection tool answer different questions. Map your data path first, then buy the control that covers the gap.
+
+Published by AY Automate.
+
+## Guide
+- [How to compare AI security controls](https://bestsecureaiforbusiness.com/)
+
+## Provider sources
+- [Microsoft Purview](https://learn.microsoft.com/purview/data-security-posture-management-setup): Data posture. Provides data security posture management. Check which data sources and licenses the proposed configuration covers.
+- [Google Cloud Model Armor](https://docs.cloud.google.com/model-armor/overview): Model inputs and outputs. Screens interactions with models. Test its behavior with representative inputs and document what gets logged.
+- [Amazon Bedrock Guardrails](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-how.html): Model safeguards. Applies configurable safeguards to model interactions. Measure false positives on your own support or sales vocabulary.
+- [NVIDIA NeMo Guardrails](https://docs.nvidia.com/nemo/guardrails/latest/about-nemo-guardrails-library/overview): Application guardrails. Offers a library for adding guardrails to language-model applications. Budget engineering time for evaluation and maintenance.
+- [Palo Alto Networks Prisma AIRS](https://docs.paloaltonetworks.com/prisma-airs/getting-started/prisma-airs-overview): Runtime security. Documents security controls for AI applications. Ask where traffic is inspected and how the service handles an outage.
+- [Cisco AI Defense](https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/AI_defense_on_Cisco_AI_PODs_reference_architecture.html): Deployment architecture. Publishes a reference architecture for AI Defense on Cisco AI PODs. Compare its inspection points with your network design.
+- [IBM watsonx.governance](https://developer.ibm.com/components/watsonx-governance/): AI governance. Supports oversight of AI systems. Ask to see the evidence an auditor can export for one deployed model.
+- [Cloudflare AI Gateway](https://developers.cloudflare.com/ai-gateway/): Gateway observability. Offers a gateway for AI requests. Review log retention, request visibility and the path for deleting sensitive records.
+- [Credo AI](https://www.credo.ai/recognition/gartner-magic-quadrant-ai-governance-platforms-2026): AI governance. Offers a governance platform. Compare its inventory and review workflow with the controls your risk team already owns.
+- [Azure AI Content Safety](https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview): Content moderation. Analyzes content for safety issues. Review supported languages and measure false positives on your own sample.
