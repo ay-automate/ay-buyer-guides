@@ -42,3 +42,5 @@ These Cloudflare Pages projects have separate sitemaps.
 | [voice-agents](https://voice-agents.pages.dev/) | [XML](https://voice-agents.pages.dev/sitemap.xml) |
 | [data-wells](https://data-wells.pages.dev/) | [XML](https://data-wells.pages.dev/sitemap.xml) |
 | [ai-agencies](https://ai-agencies.pages.dev/) | [XML](https://ai-agencies.pages.dev/sitemap.xml) |
+
+The design system is in guide.css. Edit fieldwork.json for the six buyer scenarios, decision diagrams and editable worksheet prompts. The renderer includes every generated canonical HTML page in its site’s sitemap.

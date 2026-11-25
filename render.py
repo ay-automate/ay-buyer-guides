@@ -4,13 +4,13 @@ import json
 import shutil
 import sys
 from html import escape
+from xml.etree import ElementTree as ET
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-STYLE = """
-code{overflow-wrap:anywhere}table{border-collapse:collapse;width:100%;max-width:78ch}caption{text-align:left;font:700 1.5rem Georgia,serif;margin-bottom:1rem}th,td{text-align:left;vertical-align:top;padding:.7rem;border-bottom:1px solid #cccac0}thead{background:#efeee7}tbody th{width:32%}nav{flex-wrap:wrap}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:#20231e;background:#faf9f5;font:17px/1.6 system-ui,sans-serif}a{color:var(--ink);text-underline-offset:4px}header,main,footer{max-width:1100px;margin:auto;padding:0 5vw}header{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid #cccac0;padding-block:16px}header b{font-family:Georgia,serif;font-size:21px}nav{display:flex;gap:18px;font-size:14px}section{margin:50px 0}h1,h2,h3{font-family:Georgia,serif;line-height:1.08;letter-spacing:-.025em}h1{font-size:clamp(42px,7vw,78px);max-width:820px;margin:14px 0 22px;font-weight:500}h2{font-size:clamp(30px,4vw,44px);font-weight:500;margin:0 0 16px}h3{font-size:24px;margin:0 0 10px}.hero{border-bottom:4px solid var(--ink);padding:16px 0 36px}.intro{font-size:clamp(19px,2vw,23px);max-width:760px}.meta,.tag{font-size:14px;color:var(--ink);font-weight:650}.guidance{padding:28px;background:#efeee7;border-left:4px solid var(--ink)}li+li{margin-top:9px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 34px}.entry{border-top:1px solid #b7b9ae;padding:22px 0}.entry p{margin:8px 0}.tag{margin:0 0 8px!important}.method,p,li{max-width:78ch}footer{border-top:1px solid #b7b9ae;padding-block:24px 48px;font-size:14px}details{border-top:1px solid #cccac0;padding:.65rem 0}summary{cursor:pointer;font-weight:650;color:var(--ink)}summary:focus-visible{outline:3px solid currentColor;outline-offset:3px}.entry:target{outline:2px solid var(--ink);outline-offset:4px}.footnote{font-size:14px}.skip{position:absolute;left:-100vw}.skip:focus{position:static}a:focus-visible{outline:3px solid currentColor;outline-offset:3px}@media(max-width:650px){.grid{grid-template-columns:1fr}header{align-items:start;flex-direction:column}section{margin:34px 0}.guidance{padding:20px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-"""
-
+STYLE = (HERE / 'guide.css').read_text()
+FIELDWORK = json.loads((HERE / 'fieldwork.json').read_text())
+ARTICLES = json.loads((HERE / 'decisions.json').read_text())
 
 RELATED = {
     "topaiconsultingservices.com": ("theaiconsultingfirms.com", "topaiautomationagencies.com"),
@@ -34,37 +34,73 @@ def page_head(title, description, url, site):
             '<meta property="og:type" content="website">')
 
 
+def masthead(guide):
+    name = escape(guide['name'])
+    return (f'<header><a class="brand" href="/"><img src="/favicon.png" alt="" width="35" height="35">{name}</a>'
+            '<nav aria-label="Primary"><a href="/#directory">Directory</a><a href="/worksheet/">Worksheet</a>'
+            '<a href="/#agent-access">For AI assistants</a></nav></header>')
+
+
+def hero(guide, label, title, intro, action=None):
+    field = FIELDWORK[guide['host']]
+    stages = ''.join(f'<li><b>{escape(stage)}</b><span>{escape(detail)}</span></li>' for stage, detail in field['stages'])
+    cta = f'<a class="button" href="{escape(action[0])}">{escape(action[1])} &rarr;</a>' if action else ''
+    return (f'<section class="hero"><div><p class="meta">{escape(label)}</p><h1>{escape(title)}</h1>'
+            f'<p class="intro">{escape(intro)}</p>{cta}</div><aside class="board"><h2>{escape(field["board"])}</h2>'
+            f'<ol>{stages}</ol></aside></section>')
+
+
+def reading_layout(toc, body):
+    links = ''.join(f'<a href="#{key}">{escape(label)}</a>' for key, label in toc)
+    return (f'<div class="reading"><aside><p class="reading-label">On this page</p>'
+            f'<nav aria-label="On this page">{links}</nav></aside><article>{body}</article></div>')
+
+
+def wrap_page(guide, head, content):
+    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">{head}<style>:root{{--ink:{guide['color']}}}{STYLE}</style></head><body>
+<a class="skip" href="#main">Skip to content</a>{masthead(guide)}<main id="main">{content}</main>
+<footer>Published by <a href="https://www.ayautomate.com/about">AY Automate</a>. <a href="/">Guide home</a> · <a href="https://www.ayautomate.com/contact">Send an editorial correction</a></footer></body></html>"""
+
+
 def worksheet_page(guide, sheet, base):
-    title = escape(sheet['title'])
+    field = FIELDWORK[guide['host']]
     head = page_head(sheet['title'], sheet['summary'], base + 'worksheet/', guide['name'])
     headers = ''.join(f'<th scope="col">{escape(c)}</th>' for c in sheet['columns'])
     rows = ''.join(f'<tr><th scope="row">{escape(k)}</th><td>{escape(v)}</td></tr>' for k, v in sheet['rows'])
-    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">{head}<style>:root{{--ink:{guide['color']}}}{STYLE}</style></head><body>
-<a class="skip" href="#main">Skip to worksheet</a><header><b><a href="/">{escape(guide['name'])}</a></b><a href="/#directory">Provider directory</a></header>
-<main id="main"><section class="hero"><h1>{title}</h1><p class="intro">{escape(sheet['summary'])}</p></section>
-<section><h2>Worked example</h2><p>{escape(sheet['example'])}</p></section>
-<table><caption>Worksheet</caption><thead><tr>{headers}</tr></thead><tbody>{rows}</tbody></table>
-<section><h2>{escape(sheet['close_title'])}</h2><p>{escape(sheet['close'])}</p></section></main>
-<footer><a href="/">Back to {escape(guide['name'])}</a> · <a href="https://www.ayautomate.com/contact">Send an editorial correction</a></footer></body></html>"""
+    notes = ''.join(f'<p id="prompt-{i}" class="prompt">{escape(name)}</p><div class="write-in" contenteditable="plaintext-only" role="textbox" aria-multiline="true" aria-labelledby="prompt-{i}"></div>'
+                    for i, name in enumerate(field['record'], 1))
+    article = ARTICLES[guide['host']]
+    body = f"""<section id="scenario"><h2>Worked example</h2><p>{escape(sheet['example'])}</p></section>
+<section id="worksheet"><table><caption>Worksheet</caption><thead><tr>{headers}</tr></thead><tbody>{rows}</tbody></table></section>
+<section id="record"><h2>Your decision record</h2><p>Type in the fields below or print a blank copy. Use your browser’s Print or Save as PDF before closing the page. Entries stay in this open tab.</p>{notes}
+<p><label><input type="checkbox">Evidence reviewed with the responsible owner</label></p></section>
+<section class="example" id="next"><h2>{escape(sheet['close_title'])}</h2><p>{escape(sheet['close'])}</p><p>{escape(field['next'])}</p>
+<a href="/{escape(article['slug'])}/">{escape(article['title'])}</a></section>"""
+    toc = [('scenario', 'Worked example'), ('worksheet', 'Worksheet'), ('record', 'Your decision record'), ('next', 'Next decision')]
+    opening = hero(guide, 'Buyer worksheet', sheet['title'], sheet['summary'], ('#record', 'Fill out the decision record'))
+    return wrap_page(guide, head, opening + reading_layout(toc, body))
 
 
 def decision_page(guide, article, base):
-    title = escape(article['title'])
+    field = FIELDWORK[guide['host']]
     url = base + article['slug'] + '/'
     head = page_head(article['title'], article['summary'], url, guide['name'])
-    sections = ''.join(f'<section><h2>{escape(h)}</h2><p>{escape(body)}</p></section>' for h, body in article['sections'])
+    toc = [(f'step-{i}', h) for i, (h, _) in enumerate(article['sections'], 1)]
+    sections = ''.join(f'<section id="{key}"><h2>{escape(h)}</h2><p>{escape(body)}</p></section>'
+                       for (key, h), (_, body) in zip(toc, article['sections']))
     headers = ''.join(f'<th scope="col">{escape(c)}</th>' for c in article['columns'])
     rows = []
     for label, *values in article['rows']:
         cells = ''.join(f'<td>{escape(v)}</td>' for v in values)
         rows.append(f'<tr><th scope="row">{escape(label)}</th>{cells}</tr>')
-    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">{head}<style>:root{{--ink:{guide['color']}}}{STYLE}</style></head><body>
-<a class="skip" href="#main">Skip to article</a><header><b><a href="/">{escape(guide['name'])}</a></b><a href="/#match">Find a provider</a></header>
-<main id="main"><section class="hero"><h1>{title}</h1><p class="intro">{escape(article['opening'])}</p></section>{sections}
-<table><caption>Decision table</caption><thead><tr>{headers}</tr></thead><tbody>{''.join(rows)}</tbody></table>
-<section><h2>Make the decision</h2><p>{escape(article['decision'])}</p><a href="/worksheet/">Open the buyer worksheet</a></section>
-<section><h2>Further reading</h2><a href="{escape(article['url'])}">{escape(article['source'])}</a></section></main>
-<footer>Published by AY Automate · <a href="/">Back to the guide</a></footer></body></html>"""
+    evidence = ''.join(f'<div><h3>{title}</h3><p>{escape(field[key])}</p></div>'
+                       for key, title in [('evidence', 'What to keep'), ('hold', 'When to pause')])
+    body = f"""{sections}<section id="decision-table"><table><caption>Decision table</caption><thead><tr>{headers}</tr></thead><tbody>{''.join(rows)}</tbody></table></section>
+<section id="rehearsal"><p class="meta">Illustrative buyer scenario</p><h2>{escape(field['headline'])}</h2><p>{escape(field['scenario'])}</p><p>{escape(field['test'])}</p><div class="fieldnotes">{evidence}</div></section>
+<section class="example" id="decision"><h2>Make the decision</h2><p>{escape(article['decision'])}</p><a class="button" href="/worksheet/">Open the buyer worksheet &rarr;</a></section>
+<section><h2>Further reading</h2><a href="{escape(article['url'])}">{escape(article['source'])}</a></section>"""
+    toc += [('decision-table', 'Decision table'), ('rehearsal', 'Worked buyer scenario'), ('decision', 'Make the decision')]
+    return wrap_page(guide, head, hero(guide, 'Decision guide', article['title'], article['opening']) + reading_layout(toc, body))
 
 
 def provider_matches(guide, catalog):
@@ -110,7 +146,7 @@ def render(guide, catalog, target, guides, sheet):
     base = 'https://' + guide['host'] + '/'
     public = target / guide['host']
     public.mkdir(parents=True, exist_ok=True)
-    article = json.loads((HERE / 'decisions.json').read_text())[guide['host']]
+    article = ARTICLES[guide['host']]
     decision = public / article['slug']
     decision.mkdir(exist_ok=True)
     (decision / 'index.html').write_text(decision_page(guide, article, base))
@@ -162,22 +198,29 @@ def render(guide, catalog, target, guides, sheet):
                  '<p>We chose these examples for the specific work documented in a client case or product guide. Client outcomes are provider-reported. AY Automate publishes this guide.</p>'
                  '<img src="/shortlist.png" width="1056" height="370" style="max-width:100%;height:auto" alt="Project needs and their shortlisted providers, detailed below" loading="lazy">'
                  + '<ol>' + ''.join(picks) + '</ol></section>')
-    html = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">{head}<style>:root{{--ink:{g['color']}}}{STYLE}</style></head><body>
-<a class="skip" href="#main">Skip to guide</a><header><b>{g['name']}</b><nav aria-label="Guide sections"><a href="#directory">Directory</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav></header>
-<main id="main"><section class="hero"><p class="meta">2026 buyer guide for {g['audience'].lower()}</p><h1>{g['title']}</h1><p class="intro">{g['intro']}</p><a href="#match">Find a match for my project</a></section>
+    field = FIELDWORK[guide['host']]
+    opening = hero(guide, field['label'] + ' / 2026 buyer guide', guide['title'], guide['intro'], ('#match', 'Find a provider by need'))
+    body = f"""{opening}
 {shortlist}
 <section class="guidance"><h2>What to ask before you buy</h2><ol>{steps}</ol></section>
-<section><h2><a href="/worksheet/">{escape(sheet["title"])}</a></h2><p>{escape(sheet["summary"])}</p></section>
-<section><h2><a href="{article_path}">{escape(article["title"])}</a></h2><p>{escape(article["summary"])}</p></section>
+<section><h2>Buyer resources</h2><div class="resources"><a class="resource" href="/worksheet/"><span class="card-label">Working document</span><h3>{escape(sheet["title"])}</h3><p>{escape(sheet["summary"])}</p></a>
+<a class="resource" href="{article_path}"><span class="card-label">Decision guide</span><h3>{escape(article["title"])}</h3><p>{escape(article["summary"])}</p></a></div></section>
 {provider_matches(guide, catalog)}
 <section id="directory"><h2>Directory</h2><p class="method">{g['criteria']}</p><p class="footnote">Published by AY Automate, which sells AI implementation services. Entries link to provider materials. The guide gives no numerical ratings.</p><div class="grid">{''.join(cards)}</div></section>
 <section id="pricing"><h2>How to compare prices</h2><p>{g['price']}</p></section>
 <section><h2>A worked example to review</h2><p>{g['case']}</p><a href="{g['source']}">Read the provider’s example</a></section>
-<section id="faq"><h2>{g['faq']}</h2><p>{g['answer']}</p></section>{agent_access}<section><h2>Related buyer guides</h2><ul>{related}</ul></section></main>
-<footer>Published November 25, 2026 by <a href="https://www.ayautomate.com/about">AY Automate</a>. <a href="https://www.ayautomate.com/contact">Send an editorial correction</a>.</footer></body></html>"""
+<section id="faq"><h2>{g['faq']}</h2><p>{g['answer']}</p></section>{agent_access}<section><h2>Related buyer guides</h2><ul>{related}</ul></section>"""
+    html = wrap_page(guide, head, body)
     (public / 'index.html').write_text(html)
     (public / 'robots.txt').write_text(f'User-agent: *\nAllow: /\nSitemap: {base}sitemap.xml\n')
-    (public / 'sitemap.xml').write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>{base}</loc></url><url><loc>{base}worksheet/</loc></url><url><loc>{base}{article_path[1:]}</loc></url></urlset>\n')
+    sitemap = ET.Element('urlset', xmlns='http://www.sitemaps.org/schemas/sitemap/0.9')
+    for page in sorted(public.rglob('index.html')):
+        route = page.parent.relative_to(public).as_posix()
+        location = base if route == '.' else base + route + '/'
+        if f'<link rel="canonical" href="{location}">' not in page.read_text():
+            raise ValueError(f'Canonical does not match sitemap URL {location}')
+        ET.SubElement(ET.SubElement(sitemap, 'url'), 'loc').text = location
+    ET.ElementTree(sitemap).write(public / 'sitemap.xml', encoding='utf-8', xml_declaration=True)
     (public / 'llms.txt').write_text(f"# {guide['name']}\n\n> {guide['intro']}\n\nPublished by AY Automate.\n\n## Guide\n- [{guide['title']}]({base})\n- [{sheet['title']}]({base}worksheet/)\n- [{article['title']}]({base}{article['slug']}/)\n\n## Provider sources\n" + '\n'.join(sources) + '\n')
 
 
