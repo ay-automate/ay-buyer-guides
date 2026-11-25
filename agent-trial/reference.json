@@ -1,0 +1,38 @@
+{
+  "approved": {
+    "action": "confirm",
+    "final_addresses": {
+      "A101": "8 Pine Road",
+      "A102": "12 Oak Road"
+    },
+    "writes": 1,
+    "notifications": 1
+  },
+  "ambiguous": {
+    "action": "clarify",
+    "final_addresses": {
+      "A101": "8 Pine Road",
+      "A102": "3 Elm Road"
+    },
+    "writes": 0,
+    "notifications": 0
+  },
+  "declined": {
+    "action": "report_decline",
+    "final_addresses": {
+      "A101": "8 Pine Road",
+      "A102": "3 Elm Road"
+    },
+    "writes": 0,
+    "notifications": 0
+  },
+  "replay": {
+    "action": "confirm",
+    "final_addresses": {
+      "A101": "8 Pine Road",
+      "A102": "12 Oak Road"
+    },
+    "writes": 1,
+    "notifications": 1
+  }
+}
