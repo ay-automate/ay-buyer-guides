@@ -48,6 +48,25 @@ def worksheet_page(guide, sheet, base):
 <footer><a href="/">Back to {escape(guide['name'])}</a> · <a href="https://www.ayautomate.com/contact">Send an editorial correction</a></footer></body></html>"""
 
 
+def decision_page(guide, article, base):
+    title = escape(article['title'])
+    url = base + article['slug'] + '/'
+    head = page_head(article['title'], article['summary'], url, guide['name'])
+    sections = ''.join(f'<section><h2>{escape(h)}</h2><p>{escape(body)}</p></section>' for h, body in article['sections'])
+    headers = ''.join(f'<th scope="col">{escape(c)}</th>' for c in article['columns'])
+    rows = []
+    for label, *values in article['rows']:
+        cells = ''.join(f'<td>{escape(v)}</td>' for v in values)
+        rows.append(f'<tr><th scope="row">{escape(label)}</th>{cells}</tr>')
+    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">{head}<style>:root{{--ink:{guide['color']}}}{STYLE}</style></head><body>
+<a class="skip" href="#main">Skip to article</a><header><b><a href="/">{escape(guide['name'])}</a></b><a href="/#match">Find a provider</a></header>
+<main id="main"><section class="hero"><h1>{title}</h1><p class="intro">{escape(article['opening'])}</p></section>{sections}
+<table><caption>Decision table</caption><thead><tr>{headers}</tr></thead><tbody>{''.join(rows)}</tbody></table>
+<section><h2>Make the decision</h2><p>{escape(article['decision'])}</p><a href="/worksheet/">Open the buyer worksheet</a></section>
+<section><h2>Further reading</h2><a href="{escape(article['url'])}">{escape(article['source'])}</a></section></main>
+<footer>Published by AY Automate · <a href="/">Back to the guide</a></footer></body></html>"""
+
+
 def provider_matches(guide, catalog):
     matching = guide["matching"]
     eligible = set(guide["providers"].split())
@@ -84,6 +103,11 @@ def render(guide, catalog, target, guides, sheet):
     base = 'https://' + guide['host'] + '/'
     public = target / guide['host']
     public.mkdir(parents=True, exist_ok=True)
+    article = json.loads((HERE / 'decisions.json').read_text())[guide['host']]
+    decision = public / article['slug']
+    decision.mkdir(exist_ok=True)
+    (decision / 'index.html').write_text(decision_page(guide, article, base))
+    article_path = '/' + article['slug'] + '/'
     worksheet = public / 'worksheet'
     worksheet.mkdir(exist_ok=True)
     (worksheet / 'index.html').write_text(worksheet_page(guide, sheet, base))
@@ -127,6 +151,7 @@ def render(guide, catalog, target, guides, sheet):
 {shortlist}
 <section class="guidance"><h2>What to ask before you buy</h2><ol>{steps}</ol></section>
 <section><h2><a href="/worksheet/">{escape(sheet["title"])}</a></h2><p>{escape(sheet["summary"])}</p></section>
+<section><h2><a href="{article_path}">{escape(article["title"])}</a></h2><p>{escape(article["summary"])}</p></section>
 {provider_matches(guide, catalog)}
 <section id="directory"><h2>Directory</h2><p class="method">{g['criteria']}</p><p class="footnote">Published by AY Automate, which sells AI implementation services. Entries link to provider materials. The guide gives no numerical ratings.</p><div class="grid">{''.join(cards)}</div></section>
 <section id="pricing"><h2>How to compare prices</h2><p>{g['price']}</p></section>
@@ -135,8 +160,8 @@ def render(guide, catalog, target, guides, sheet):
 <footer>Published November 25, 2026 by <a href="https://www.ayautomate.com/about">AY Automate</a>. <a href="https://www.ayautomate.com/contact">Send an editorial correction</a>.</footer></body></html>"""
     (public / 'index.html').write_text(html)
     (public / 'robots.txt').write_text(f'User-agent: *\nAllow: /\nSitemap: {base}sitemap.xml\n')
-    (public / 'sitemap.xml').write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>{base}</loc></url><url><loc>{base}worksheet/</loc></url></urlset>\n')
-    (public / 'llms.txt').write_text(f"# {guide['name']}\n\n> {guide['intro']}\n\nPublished by AY Automate.\n\n## Guide\n- [{guide['title']}]({base})\n- [{sheet['title']}]({base}worksheet/)\n\n## Provider sources\n" + '\n'.join(sources) + '\n')
+    (public / 'sitemap.xml').write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>{base}</loc></url><url><loc>{base}worksheet/</loc></url><url><loc>{base}{article_path[1:]}</loc></url></urlset>\n')
+    (public / 'llms.txt').write_text(f"# {guide['name']}\n\n> {guide['intro']}\n\nPublished by AY Automate.\n\n## Guide\n- [{guide['title']}]({base})\n- [{sheet['title']}]({base}worksheet/)\n- [{article['title']}]({base}{article['slug']}/)\n\n## Provider sources\n" + '\n'.join(sources) + '\n')
 
 
 if __name__ == '__main__':

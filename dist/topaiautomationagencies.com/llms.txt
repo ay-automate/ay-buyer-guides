@@ -7,6 +7,7 @@ Published by AY Automate.
 ## Guide
 - [Find an agency for your first production workflow](https://topaiautomationagencies.com/)
 - [Estimate the cost of automating one workflow](https://topaiautomationagencies.com/worksheet/)
+- [Automation agency pricing: fixed fee or retainer?](https://topaiautomationagencies.com/automation-agency-pricing/)
 
 ## Provider sources
 - [AY Automate](https://www.ayautomate.com/case-studies): Workflow implementation. Builds AI automations and publishes delivery case studies. Ask who owns each integration after handover.

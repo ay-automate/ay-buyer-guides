@@ -7,6 +7,7 @@ Published by AY Automate.
 ## Guide
 - [Build an AI consulting shortlist for your RFP](https://theaiconsultingfirms.com/)
 - [Score AI consulting firms from the same RFP](https://theaiconsultingfirms.com/worksheet/)
+- [An AI RFP template with a worked scoring example](https://theaiconsultingfirms.com/ai-rfp-template/)
 
 ## Provider sources
 - [Accenture](https://www.accenture.com/en-us/support/state-texas-accenture-dir-artificial-intelligence): Enterprise delivery. Publishes an AI services offering under the Texas DIR contract. Check the scope and purchasing terms applicable to your organization.

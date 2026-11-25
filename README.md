@@ -13,7 +13,7 @@ Six independent guides for teams buying AI services. Each directory entry includ
 
 ## Build the guides
 
-Run `python3 render.py dist` from the repository root. Open `dist/<domain>/index.html` or serve that directory with any static web server. Each site has its own favicon, canonical URLs, robots.txt, llms.txt and XML sitemap. Both the homepage and the buyer worksheet at /worksheet/ appear in each sitemap. Edit worksheets.json to update the examples and decision tables. Source icons live under icons/. The consulting-firms site also generates firms.json.
+Run `python3 render.py dist` from the repository root. Open `dist/<domain>/index.html` or serve that directory with any static web server. Each site has its own favicon, canonical URLs, robots.txt, llms.txt and XML sitemap. Each sitemap includes the homepage, the buyer worksheet and a domain-specific decision guide. Edit decisions.json for the decision guides. Edit worksheets.json to update the examples and decision tables. Source icons live under icons/. The consulting-firms site also generates firms.json.
 
 The public source corresponds to the published guides. Live releases run through the publisher’s separate deployment repository.
 

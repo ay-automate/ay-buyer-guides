@@ -7,6 +7,7 @@ Published by AY Automate.
 ## Guide
 - [Which AI consulting service do you need?](https://topaiconsultingservices.com/)
 - [Write a brief for a paid AI pilot](https://topaiconsultingservices.com/worksheet/)
+- [AI consulting pricing: compare two pilot quotes](https://topaiconsultingservices.com/ai-consulting-pricing/)
 
 ## Provider sources
 - [AY Automate](https://www.ayautomate.com/case-studies): Workflow implementation. Builds AI automations and publishes delivery case studies. Ask who owns each integration after handover.

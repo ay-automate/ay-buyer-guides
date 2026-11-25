@@ -7,6 +7,7 @@ Published by AY Automate.
 ## Guide
 - [How to compare AI security controls](https://bestsecureaiforbusiness.com/)
 - [Trace a test document through an AI service](https://bestsecureaiforbusiness.com/worksheet/)
+- [An AI vendor security questionnaire for procurement](https://bestsecureaiforbusiness.com/ai-vendor-security-questionnaire/)
 
 ## Provider sources
 - [Microsoft Purview](https://learn.microsoft.com/purview/data-security-posture-management-setup): Data posture. Provides data security posture management. Check which data sources and licenses the proposed configuration covers.

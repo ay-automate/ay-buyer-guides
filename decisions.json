@@ -1,0 +1,277 @@
+{
+  "topaiconsultingservices.com": {
+    "slug": "ai-consulting-pricing",
+    "title": "AI consulting pricing: compare two pilot quotes",
+    "summary": "Compare pilot fees, internal labor and recurring costs with a worked six-month example before accepting a consulting proposal.",
+    "opening": "Two consultancies quote the same invoice-matching pilot. One includes a connector and training. The other expects your engineer to build the connector. Put the numbers on the same six-month timeline before discussing the day rate.",
+    "sections": [
+      [
+        "Agree on what the pilot must deliver",
+        "Write down the workflow start, the last permitted action and who accepts the result. For an invoice pilot, that might mean matching an invoice to an order, showing the discrepancy and sending it to a clerk. A quote that stops at extracting line items buys a different deliverable. Ask the bidder to mark every dependency as included, client-supplied or optional."
+      ],
+      [
+        "Count the hours your team supplies",
+        "In this illustration, the first quote includes integration for $15,000 and charges $450 a month for support. The second is $11,000 plus $750 a month and requires 40 hours from your engineer. At an illustrative loaded rate of $80 an hour, the second quote uses $3,200 of internal time. Replace these inputs with your own rates and the number of paid support months."
+      ],
+      [
+        "Price the decision after acceptance",
+        "Ask for the cost of keeping the pilot running for one additional month, exporting the data, and handing the integration to another operator. Check whether support starts at signing or at acceptance. A fee that starts during a delayed integration changes the total even if nobody changes the stated day rate."
+      ]
+    ],
+    "columns": [
+      "Six-month cost in this example",
+      "Quote A",
+      "Quote B"
+    ],
+    "rows": [
+      [
+        "Pilot fee",
+        "$15,000",
+        "$11,000"
+      ],
+      [
+        "Buyer engineering time",
+        "$0 assumed",
+        "$3,200"
+      ],
+      [
+        "Six months of support",
+        "$2,700",
+        "$4,500"
+      ],
+      [
+        "Total before usage, taxes and overruns",
+        "$17,700",
+        "$18,700"
+      ]
+    ],
+    "decision": "Ask both bidders to sign off on the assumptions in the table. If one cannot price an unknown data-cleaning task, give it a capped discovery budget and a deliverable: a sampled error rate, a revised estimate and a decision date.",
+    "source": "UK government guidance on defining outcomes for AI procurement",
+    "url": "https://www.gov.uk/government/publications/guidelines-for-ai-procurement/guidelines-for-ai-procurement"
+  },
+  "topaiagentsforbusiness.com": {
+    "slug": "ai-agent-evaluation",
+    "title": "AI agent evaluation before the first live write",
+    "summary": "Score an agent on correct actions, recoverable errors and unsafe writes before allowing it to change customer records.",
+    "opening": "A service desk agent can draft an accurate response and still update the wrong order. Treat the text, the chosen record and the action as three separate things to inspect. This evaluation uses a sandbox order system and synthetic customers.",
+    "sections": [
+      [
+        "Build an answer key from the operator’s work",
+        "Give each test a request, a starting record, an allowed action and an expected final state. Include two customers with similar names, an already-closed order and a reviewer who rejects a change. Have the operator decide the correct outcome before anyone sees the agent run. Keep one copy of the starting records so both vendors start from the same state."
+      ],
+      [
+        "Measure the completed task",
+        "A correct answer in the chat window earns no credit for an update that never reached the order system. Read the resulting database record or application audit event. Record the account that wrote it and the number of downstream emails it triggered. Count a clarification as a correct outcome when the answer key calls for it."
+      ],
+      [
+        "Run the same task under less access",
+        "Repeat the request after removing write access from the test account. The user should be able to see where the task stopped and who can take over. Restore permissions and resume the failed run once. Check for duplicate updates, notifications and approvals. Record the time the operator spent recovering the case."
+      ]
+    ],
+    "columns": [
+      "Test case",
+      "Pass condition"
+    ],
+    "rows": [
+      [
+        "Two plausible orders",
+        "Agent asks which order to change. Neither record changes."
+      ],
+      [
+        "Rejected approval",
+        "Original record remains and the customer receives no success email."
+      ],
+      [
+        "Retry after a committed write",
+        "One final update, one notification and a traceable reviewer."
+      ],
+      [
+        "Restricted operator",
+        "Protected records remain inaccessible and the handoff identifies the next authorized action."
+      ]
+    ],
+    "decision": "Set the no-release conditions before the trial. A change to another customer’s order is enough to stop this pilot even if all other examples pass. Use aggregate completion rates to compare the candidates that pass those conditions.",
+    "source": "Microsoft’s guide to agent performance analytics",
+    "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-overview"
+  },
+  "bestsecureaiforbusiness.com": {
+    "slug": "ai-vendor-security-questionnaire",
+    "title": "An AI vendor security questionnaire for procurement",
+    "summary": "Ask for evidence about access, retention, subprocessors and deletion, then record which answers your team actually tested.",
+    "opening": "Your legal team uploads a synthetic contract into a trial workspace. An employee in another department searches for its filename. This simple exercise gives procurement a precise opening question: which permissions did the system check before returning the result?",
+    "sections": [
+      [
+        "Trace one request across the service",
+        "Ask the vendor to draw the request path from upload to response. Label each copy of the material, including extracted text, embeddings, support logs and backups. Beside each copy, record the owner, location, access rules and retention interval. If the model provider changes between product tiers, ask the vendor to identify the tier described by its answer."
+      ],
+      [
+        "Separate what you tested from what the vendor promised",
+        "At the review meeting, give each answer one evidence type. A screen recording can show that a user lost access after a role change. A contract clause can define when backup copies expire. The recording alone does not prove when a backup was erased. Give unresolved items an owner who can obtain the missing evidence."
+      ],
+      [
+        "Test a change, then record the response",
+        "Move the synthetic file to a restricted group, revoke the uploader and repeat the search as a second user. Check generated summaries and shared links as well as the original file. Ask support to locate the associated audit event by request ID. Record timestamps and the product version so that another reviewer can repeat the test."
+      ]
+    ],
+    "columns": [
+      "Question to send",
+      "Evidence to attach"
+    ],
+    "rows": [
+      [
+        "Who can retrieve a file after group access is removed?",
+        "Two test identities and the observed before/after result."
+      ],
+      [
+        "Which copies survive deletion?",
+        "Retention schedule per system, exception owner and contract reference."
+      ],
+      [
+        "Who can view customer prompts in support?",
+        "Support-access approval flow and a redacted example event."
+      ],
+      [
+        "What changes when a subprocessor changes?",
+        "Notification mechanism, responsible contact and review window."
+      ]
+    ],
+    "decision": "The decision record should name the permitted data classes and the unresolved conditions. A team can approve a synthetic-data pilot while it waits for evidence about production customer records. Review those conditions again before anyone uploads live documents.",
+    "source": "NIST Privacy Framework",
+    "url": "https://www.nist.gov/privacy-framework"
+  },
+  "theaiconsultingfirms.com": {
+    "slug": "ai-rfp-template",
+    "title": "An AI RFP template with a worked scoring example",
+    "summary": "Give bidders the same test, score the evidence separately from the price, and keep an audit trail of the selection.",
+    "opening": "An RFP for a ticket-triage pilot attracts three polished demos. Only one team explains what happens when a ticket arrives in the wrong language. A common test pack lets your reviewers reproduce the answer and compare the actual proposals.",
+    "sections": [
+      [
+        "Give every bidder the same starting material",
+        "Include a redacted process map, the allowed tools, a sample of representative tickets and the intended user. Reserve a few tickets for the live acceptance session. Ask the bidder to name the engineer and business owner responsible for each deliverable. Put assumptions and exclusions beside each price line."
+      ],
+      [
+        "Set mandatory conditions before scoring",
+        "If the buyer requires company-owned repositories or a particular data boundary, mark these as mandatory. A bidder that cannot demonstrate one has an open condition. Keep that condition visible even when the bidder scores well on a demo. Invite evidence of an equivalent solution if your procurement process permits one."
+      ],
+      [
+        "Calculate an example together",
+        "For this illustrative scorecard, score each dimension from zero to five, then multiply by its weight divided by five. A bid scoring four for delivery, three for operations and five for commercial clarity earns 36 + 21 + 20 = 77 points. Have reviewers attach their evidence independently before discussing a consensus score."
+      ]
+    ],
+    "columns": [
+      "Example dimension",
+      "Weight",
+      "Evidence reviewers can inspect"
+    ],
+    "rows": [
+      [
+        "Delivery against the brief",
+        "45%",
+        "Run the held-back tickets and inspect the routing decisions."
+      ],
+      [
+        "Operation and handover",
+        "35%",
+        "Have your operator trace a failed run using the proposed instructions."
+      ],
+      [
+        "Commercial clarity",
+        "20%",
+        "Reconcile setup, usage, internal labor, support and exit costs."
+      ]
+    ],
+    "decision": "Use the award memo to explain the tradeoff the score hides. For example, a lower-scoring bid may still be viable if the team accepts a shorter pilot and a clear exit. Record the amendment and ask all eligible bidders the same clarification where your process requires it.",
+    "source": "UK government guidelines for AI procurement",
+    "url": "https://www.gov.uk/government/publications/guidelines-for-ai-procurement/guidelines-for-ai-procurement"
+  },
+  "theaiconsultingcompanies.com": {
+    "slug": "ai-project-handover",
+    "title": "AI project handover: what the delivery team owes you",
+    "summary": "Use a staged handover to test deployment ownership, recovery, data access and the first unaided release after your vendor leaves.",
+    "opening": "A vendor hands over a repository on Friday. On Monday, your engineer discovers that a scheduled job still uses the vendor’s account. Before the engagement ends, have the people who will operate the application complete a change using only company-owned access.",
+    "sections": [
+      [
+        "Build a handover register",
+        "Create one row for each repository, build pipeline, runtime, database, model account and scheduled job. Record the business owner, technical owner, billing account, recovery contact and location of the access procedure. Store credential references in the register. Keep the actual secrets in your secret manager."
+      ],
+      [
+        "Rehearse the first independent release",
+        "Ask a company engineer to change one staging setting, deploy the reviewed revision and locate its release identifier. The vendor observes and notes where the runbook fails. Repeat the exercise with a different operator after fixing the instructions. A successful vendor-led screen share does not show whether either operator can do the work alone."
+      ],
+      [
+        "Recover data as well as software",
+        "Use an isolated database for the rehearsal. Restore a recent backup and verify a known business record plus its attachments. Then ask the operator to trace a single failed request from its public identifier into the relevant logs. Keep the measured time and the missing permissions with the acceptance record."
+      ]
+    ],
+    "columns": [
+      "Handover item",
+      "Proof to retain"
+    ],
+    "rows": [
+      [
+        "Source and release",
+        "Commit, build record, deploying identity and working rollback procedure."
+      ],
+      [
+        "Production dependencies",
+        "Inventory of external APIs, quotas, billing owners and renewal dates."
+      ],
+      [
+        "Data recovery",
+        "Restore timestamp, record checked and person who performed it."
+      ],
+      [
+        "Vendor exit",
+        "Revoked test identity and a successful subsequent run under a company account."
+      ]
+    ],
+    "decision": "Tie final acceptance to the exercises that matter for this application. A successful deployment cannot compensate for an untested restore. Assign any outstanding recovery or monitoring task to a named person with a deadline and agree who supports incidents in the meantime.",
+    "source": "Google Cloud operational excellence guidance",
+    "url": "https://docs.cloud.google.com/architecture/framework/operational-excellence"
+  },
+  "topaiautomationagencies.com": {
+    "slug": "automation-agency-pricing",
+    "title": "Automation agency pricing: fixed fee or retainer?",
+    "summary": "Compare ownership, included changes, usage charges and support before choosing how to pay an automation agency.",
+    "opening": "A purchasing team can receive a fixed implementation price and a monthly retainer for the same order-entry workflow. The cheaper one depends on how often the source systems change and who handles failed jobs. Ask for two prices for the same twelve months of work.",
+    "sections": [
+      [
+        "Price the first delivery",
+        "Specify the trigger, destination systems, required approvals and the record that counts as a completed order. A fixed fee works best when both parties can test that definition. Ask who pays for changes to field mappings discovered during the pilot and whether the buyer can reject a duplicate or incomplete record."
+      ],
+      [
+        "Work through a retainer example",
+        "Suppose the fixed bid is $8,000 plus $300 a month in support. Another agency offers $1,050 a month including setup and two small changes per month. With twelve paid months and identical third-party usage, the fixed option costs $11,600 and the retainer costs $12,600. If the fixed bidder charges an extra $1,500 for required changes covered by the retainer, the comparison becomes $13,100 versus $12,600. These figures illustrate the calculation."
+      ],
+      [
+        "Decide what happens during a failure",
+        "Ask the agency to separate response time from recovery time. For a delayed order, identify who pauses retries, who checks for a duplicate and who tells the customer that processing resumed. Include the cost of out-of-hours support only when the workflow actually needs it."
+      ]
+    ],
+    "columns": [
+      "Contract item",
+      "Request from both agencies"
+    ],
+    "rows": [
+      [
+        "Usage",
+        "Cost per execution, model call and connected tool, at your expected volume."
+      ],
+      [
+        "Changes",
+        "A written example of an included change and an example that triggers a new quote."
+      ],
+      [
+        "Operations",
+        "Alert destination, support hours, escalation owner and handling of failed runs."
+      ],
+      [
+        "Exit",
+        "Workflow export, documentation, account ownership and transition cost."
+      ]
+    ],
+    "decision": "Review the last three production changes with your operations lead. Price those actual changes under each proposal. If the cheaper agreement depends on never changing a supplier field or an approval rule, take that assumption back to the agency before you sign.",
+    "source": "n8n documentation on queue-mode components and workers",
+    "url": "https://docs.n8n.io/hosting/scaling/queue-mode/"
+  }
+}
