@@ -1,0 +1,56 @@
+{
+  "topaiconsultingservices.com": {
+    "title": "Write a brief for a paid AI pilot",
+    "summary": "Give bidders the same workflow, sample records and acceptance test. Their quotes will show what each team expects you to supply.",
+    "example": "Suppose a finance team wants help matching invoices to purchase orders. Pull a small set of closed invoices that includes split deliveries, duplicate invoices and missing order numbers. Have the person who processes invoices record the correct outcome for each. Hold some examples back for the acceptance test.",
+    "columns": ["Field in the brief", "Example wording"],
+    "rows": [["Starting point", "Our clerk opens the invoice and purchase order side by side. We can provide redacted copies and the clerk’s decision for each pair."], ["Boundary", "The pilot may suggest a match and explain discrepancies. The clerk approves every payment. The pilot has no bank access."], ["Acceptance test", "Run the held-back invoices with the clerk watching. Record correct matches, bad matches, escalations and review minutes separately."], ["Price comparison", "Quote implementation, sample preparation, integration and recurring costs on separate lines. Identify who owns each task."]],
+    "close_title": "Decide whether to buy the rollout",
+    "close": "A pilot that saves five minutes on a clean invoice can still add work on exceptions. Review one complete batch with the clerk. Use the time for the whole batch and the cost of fixing mistakes when you decide whether to continue."
+  },
+  "topaiagentsforbusiness.com": {
+    "title": "Run a trial before giving an agent write access",
+    "summary": "Use a sandbox CRM and a test inbox to see which actions an agent takes, what it records and when it asks for help.",
+    "example": "Give two vendors the same task. A customer has emailed a new delivery address. The agent must find the correct order, propose the change and wait for a reviewer. Seed the CRM with two customers who have the same surname so the trial includes an ambiguous match.",
+    "columns": ["Trial run", "What to record"],
+    "rows": [["One matching order", "Check the order ID, old and proposed addresses, reviewer identity and final change. Save the audit event."], ["Two plausible orders", "Look for a clarification request. A change to either record before the customer is identified fails this run."], ["Reviewer declines", "Inspect the CRM and outbound mail. The original address should remain and no confirmation should be sent."], ["Timeout after a successful write", "Resume the interrupted run. Count address changes and emails. A retry should leave one approved change and one confirmation."]],
+    "close_title": "Set the permission boundary",
+    "close": "Write down the exact tools and fields needed for the trial. Give the pilot account that access, repeat the four runs, then remove the account and check that its credentials stop working. Keep the audit events with the approval decision."
+  },
+  "bestsecureaiforbusiness.com": {
+    "title": "Trace a test document through an AI service",
+    "summary": "Use a synthetic document to check access, retention and deletion before employees upload customer files.",
+    "example": "Create a fictitious contract with a unique phrase that appears nowhere else in your test workspace. Upload it as a member of the legal team. Have a colleague with a sales-only account search for the phrase. Record the account, time and result so the vendor can reproduce what you saw.",
+    "columns": ["Checkpoint", "Evidence to collect"],
+    "rows": [["Upload and retrieval", "Record which team can retrieve the contract, its filename and generated summaries. Repeat after removing the uploader’s access."], ["Processing and logs", "Ask the vendor to trace the request ID through its model provider, search index and support logs. Record who can inspect each copy."], ["Deletion", "Delete the test file and repeat the search. Ask when embeddings, cached answers, logs and backups expire, and which of those deadlines you can verify."], ["Contract review", "Attach the retention schedule and support-access rules to the procurement record. Assign an owner to follow up on unanswered questions."]],
+    "close_title": "Read the result carefully",
+    "close": "An empty search result shows what the user can retrieve at that moment. It cannot establish that a backup expired. Record the retrieval test and the vendor’s retention evidence as separate findings so the person approving the purchase knows which claim each supports."
+  },
+  "theaiconsultingfirms.com": {
+    "title": "Score AI consulting firms from the same RFP",
+    "summary": "Send each firm one scenario and one evidence request. Use the answers to choose which team deserves a paid discovery engagement.",
+    "example": "Suppose two firms propose a support-ticket triage pilot. One offers a polished demo. The other sends a sample acceptance test. Give both the same anonymized tickets, a list of permitted actions and the name of the person who will approve the pilot. Ask each to walk through one misrouted ticket.",
+    "columns": ["Decision", "Evidence to request"],
+    "rows": [["Who will do the work?", "Name the delivery lead and the engineer who will handle integration. Ask them to attend the review and identify their weekly availability."], ["Can the buyer test the outcome?", "Request a sample scorecard with expected routing, actual routing and the cost of escalation. Ask who decides disputed labels."], ["What does the quote buy?", "Mark each item as included, optional or supplied by the buyer. Include data cleanup, access setup, monitoring and post-launch support."], ["Can another team take over?", "Request a sample handover and a reference who has operated a delivered system. Ask the reference about the first change their own team made."]],
+    "close_title": "Keep a decision record",
+    "close": "Have each reviewer mark every row as demonstrated, promised or unanswered before the group meets. Attach the file or reference behind each mark. If the preferred firm wins on a promise, put that deliverable and its acceptance test in the statement of work."
+  },
+  "theaiconsultingcompanies.com": {
+    "title": "Rehearse the handover of an AI application",
+    "summary": "Ask your own operator to deploy, diagnose and roll back the application while the delivery team observes.",
+    "example": "Pick a staging service your team will inherit. Give an operator the runbook and a clean account with the permissions their job will actually have. The vendor can observe and take notes. Every time the operator needs an undocumented command, credential or decision, record the missing instruction.",
+    "columns": ["Exercise", "Evidence of a usable handover"],
+    "rows": [["Deploy a small change", "The operator finds the repository, identifies the running revision and deploys an approved change to staging using a company-owned account."], ["Find a failed job", "Give the operator a request ID. They find the relevant logs, identify the failing dependency and locate the escalation contact."], ["Roll back", "The operator restores the previous release and checks a user-visible result. Record separately how to recover any data changed since deployment."], ["Remove vendor access", "List vendor identities, scheduled jobs and shared credentials. Revoke a test identity and confirm the application still completes its normal workflow."]],
+    "close_title": "Agree on the last support payment",
+    "close": "Put the rehearsal date, operator name and open items in the handover record. Give each open item an owner and a retest date. Repeat the failed exercise with the updated instructions before signing acceptance."
+  },
+  "topaiautomationagencies.com": {
+    "title": "Estimate the cost of automating one workflow",
+    "summary": "Count manual exceptions, review time and recurring charges before comparing an agency’s implementation quote with the work it could save.",
+    "example": "Consider an illustrative order-entry queue with 400 requests a month at six minutes each. That is 40 hours of manual work. If 80 requests still need six minutes and the other 320 need one minute of review, the new workload is 13 hours and 20 minutes. The potential saving is 26 hours and 40 minutes before maintenance.",
+    "columns": ["Input", "Where to get it"],
+    "rows": [["Monthly volume", "Count completed requests in the source system. Keep retries and duplicate events out of the count."], ["Time after automation", "Time both a routine review and a rejected request. Include the steps needed to correct bad data and resubmit."], ["Recurring spend", "Ask for platform fees, model or API usage, support hours and minimum commitments. Price the same monthly volume for every quote."], ["Break-even point", "Multiply hours recovered by your loaded hourly rate. Subtract recurring spend, then divide the setup fee by the positive monthly benefit."]],
+    "close_title": "Check what happens in a difficult month",
+    "close": "Repeat the calculation with twice as many exceptions. If the monthly benefit turns negative, the setup cost has no payback under that assumption. Run a short trial on the hardest requests and measure the exception rate before signing."
+  }
+}

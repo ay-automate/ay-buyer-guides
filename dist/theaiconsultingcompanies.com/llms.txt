@@ -6,6 +6,7 @@ Published by AY Automate.
 
 ## Guide
 - [Choose an AI delivery company for your team](https://theaiconsultingcompanies.com/)
+- [Rehearse the handover of an AI application](https://theaiconsultingcompanies.com/worksheet/)
 
 ## Provider sources
 - [Slalom](https://www.slalom.com/us/en/services/artificial-intelligence): AI implementation. Describes AI consulting for enterprise teams. Ask who will build alongside your engineers and support the first release.

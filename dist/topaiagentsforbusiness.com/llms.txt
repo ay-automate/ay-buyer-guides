@@ -6,6 +6,7 @@ Published by AY Automate.
 
 ## Guide
 - [AI agents for the systems your business already uses](https://topaiagentsforbusiness.com/)
+- [Run a trial before giving an agent write access](https://topaiagentsforbusiness.com/worksheet/)
 
 ## Provider sources
 - [Microsoft Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-overview): Microsoft workflows. Provides tools to build agents. Test access with two employees who have different permissions on the same document.
