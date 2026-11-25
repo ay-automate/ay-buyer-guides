@@ -92,10 +92,17 @@ def render(guide, catalog, target, guides, sheet):
     g = {key: escape(value, quote=True) for key, value in guide.items() if isinstance(value, str)}
     keys = guide["providers"].split()
     assert len(set(keys)) == len(keys) >= 10
+    questions = guide.get('review_questions', {})
+    if questions and set(questions) != set(keys):
+        raise ValueError(f"Incomplete buying criteria for {guide['host']}")
+    descriptions = {}
     cards = []
     sources = []
     for key in keys:
         name, group, note, url = catalog[key]
+        if key in questions:
+            note = note.partition(". ")[0].rstrip(".") + ". " + questions[key]
+        descriptions[key] = note
         name, group, note, link = map(escape, (name, group, note, url))
         cards.append(f'<article class="entry" id="firm-{escape(key)}"><p class="tag">{group}</p><h3>{name}</h3><p>{note}</p><a href="{link}">Source from {name}</a></article>')
         sources.append(f'- [{name}]({url}): {group}. {note}')
@@ -117,6 +124,16 @@ def render(guide, catalog, target, guides, sheet):
     website = json.dumps({"@context": "https://schema.org", "@type": "WebSite",
                           "name": guide["name"], "url": base}, ensure_ascii=True).replace("<", r"\u003c")
     head += f'<script type="application/ld+json">{website}</script>'
+    if questions:
+        directory = {"@context": "https://schema.org", "@type": "CollectionPage",
+                     "url": base, "name": guide['title'], "description": guide['intro'],
+                     "publisher": {"@type": "Organization", "name": "AY Automate", "url": "https://www.ayautomate.com/"},
+                     "mainEntity": {"@type": "ItemList", "itemListOrder": "https://schema.org/ItemListUnordered",
+                                    "numberOfItems": len(keys),
+                                    "itemListElement": [{"@type": "ListItem", "position": i, "name": catalog[k][0],
+                                                         "url": base + "#firm-" + k} for i, k in enumerate(keys, 1)]}}
+        structured = json.dumps(directory, ensure_ascii=True).replace("<", r"\u003c")
+        head += f'<script type="application/ld+json">{structured}</script>'
     related = ''.join(
         f'<li><a href="https://{host}/">{escape(guides[host]["title"])}</a></li>'
         for host in RELATED[guide["host"]]
@@ -125,7 +142,7 @@ def render(guide, catalog, target, guides, sheet):
     data = {
         "picks": selection["picks"], "guide": guide["name"], "publisher": "AY Automate", "methodology": guide["criteria"],
         "questions": guide["checklist"], "pricing": guide["price"],
-        "firms": [dict(id=k, name=catalog[k][0], specialty=catalog[k][1], note=catalog[k][2],
+        "firms": [dict(id=k, name=catalog[k][0], specialty=catalog[k][1], note=descriptions[k],
                       source=catalog[k][3], profile=base + "#firm-" + k) for k in keys]
     }
     (public / "firms.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")

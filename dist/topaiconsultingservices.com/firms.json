@@ -21,7 +21,7 @@
   ],
   "guide": "AI Consulting Services",
   "publisher": "AY Automate",
-  "methodology": "We selected providers with published examples of strategy, engineering or workflow implementation. The service labels describe the linked evidence.",
+  "methodology": "Compare the deliverable each service could produce: a scoped backlog, a working integration or a pilot your operator can accept. The directory gives you a deliverable to request from each bidder.",
   "questions": [
     "For an assessment, ask for a prioritized backlog with an owner and a baseline for each opportunity.",
     "For a pilot, agree on a test dataset, an acceptance threshold and the decisions a human will retain.",
@@ -33,7 +33,7 @@
       "id": "ay",
       "name": "AY Automate",
       "specialty": "Workflow implementation",
-      "note": "Builds AI automations and publishes delivery case studies. Ask who owns each integration after handover.",
+      "note": "Builds AI automations and publishes delivery case studies. Ask for a pilot that takes one document from intake to a human-approved exception. Specify who labels the acceptance examples.",
       "source": "https://www.ayautomate.com/case-studies",
       "profile": "https://topaiconsultingservices.com/#firm-ay"
     },
@@ -41,7 +41,7 @@
       "id": "bcg",
       "name": "BCG",
       "specialty": "Enterprise transformation",
-      "note": "Combines strategy and applied AI. Ask which operating decisions the first engagement would change.",
+      "note": "Combines strategy and applied AI. For a strategy purchase, request a sequenced opportunity list, one accountable sponsor per item and an explicit reason to decline the weakest item.",
       "source": "https://www.bcg.com/capabilities/artificial-intelligence",
       "profile": "https://topaiconsultingservices.com/#firm-bcg"
     },
@@ -49,7 +49,7 @@
       "id": "ibm",
       "name": "IBM Consulting",
       "specialty": "Technology integration",
-      "note": "Offers artificial intelligence consulting. Ask for a design showing how existing applications and data will connect.",
+      "note": "Offers artificial intelligence consulting. Before funding integration, ask for a map of the source systems and a running test against one of your representative records.",
       "source": "https://www.ibm.com/consulting/artificial-intelligence",
       "profile": "https://topaiconsultingservices.com/#firm-ibm"
     },
@@ -57,7 +57,7 @@
       "id": "slalom",
       "name": "Slalom",
       "specialty": "AI implementation",
-      "note": "Describes AI consulting for enterprise teams. Ask who will build alongside your engineers and support the first release.",
+      "note": "Describes AI consulting for enterprise teams. Write down the smallest queue the team could launch. Request a cutover rehearsal and a training deliverable in the fixed scope.",
       "source": "https://www.slalom.com/us/en/services/artificial-intelligence",
       "profile": "https://topaiconsultingservices.com/#firm-slalom"
     },
@@ -65,7 +65,7 @@
       "id": "mck",
       "name": "McKinsey QuantumBlack",
       "specialty": "Analytics and operating model",
-      "note": "Describes a hybrid intelligence approach. Bring a decision that already has an accountable business owner.",
+      "note": "Describes a hybrid intelligence approach. Request an operating-model design that names the decision owner and shows how a disputed model output is reviewed.",
       "source": "https://www.mckinsey.com/capabilities/quantumblack/our-approach",
       "profile": "https://topaiconsultingservices.com/#firm-mck"
     },
@@ -73,7 +73,7 @@
       "id": "accent",
       "name": "Accenture",
       "specialty": "Enterprise delivery",
-      "note": "Publishes an AI services offering under the Texas DIR contract. Check the scope and purchasing terms applicable to your organization.",
+      "note": "Publishes an AI services offering under the Texas DIR contract. Separate the statement of work into discovery, build and rollout. Mark which deliverable releases each payment.",
       "source": "https://www.accenture.com/en-us/support/state-texas-accenture-dir-artificial-intelligence",
       "profile": "https://topaiconsultingservices.com/#firm-accent"
     },
@@ -81,7 +81,7 @@
       "id": "deloitte",
       "name": "Deloitte",
       "specialty": "Engineering and data",
-      "note": "Groups engineering, AI and data delivery in one practice. Ask how platform work and application delivery would be costed separately.",
+      "note": "Groups engineering, AI and data delivery in one practice. Specify which dataset must be usable at the end of engineering discovery. Ask for quality checks your engineer can repeat.",
       "source": "https://www.deloitte.com/global/en/services/consulting/services/engineering-ai-data.html",
       "profile": "https://topaiconsultingservices.com/#firm-deloitte"
     },
@@ -89,7 +89,7 @@
       "id": "cap",
       "name": "Capgemini",
       "specialty": "Process automation",
-      "note": "Documents the rollout of a global robotic process automation service at ZF. Ask how the team handles process exceptions.",
+      "note": "Documents the rollout of a global robotic process automation service at ZF. For a shared process service, request a backlog intake exercise with two departments competing for the same delivery capacity.",
       "source": "https://www.capgemini.com/news/client-stories/zf-friedrichshafen-establishes-a-global-rpa-service-in-a-single-year/",
       "profile": "https://topaiconsultingservices.com/#firm-cap"
     },
@@ -97,7 +97,7 @@
       "id": "brain",
       "name": "WeAreBrain",
       "specialty": "Workflow integration",
-      "note": "Offers workflow automation and integration. Bring a process that crosses two systems and ask how failed writes are reconciled.",
+      "note": "Offers workflow automation and integration. If the service connects an ERP to another system, ask for one failed transaction to be replayed safely before acceptance.",
       "source": "https://wearebrain.com/ai-automation-agency/",
       "profile": "https://topaiconsultingservices.com/#firm-brain"
     },
@@ -105,7 +105,7 @@
       "id": "good",
       "name": "Goodspeed",
       "specialty": "Operations workflows",
-      "note": "Describes n8n workflows and AI agents for operations teams. Ask for an example of a workflow your own team could maintain.",
+      "note": "Describes n8n workflows and AI agents for operations teams. Ask for a working automation and a handover exercise. Price employee time spent learning the workflow as a buyer contribution.",
       "source": "https://goodspeed.studio/n8n-agency",
       "profile": "https://topaiconsultingservices.com/#firm-good"
     }

@@ -1,23 +1,23 @@
 # AI Automation Agencies
 
-> Bring a workflow with a clear trigger, an owner and a known failure mode. A useful agency demo shows what happens to the work when one system goes offline.
+> Evaluate automation agencies using exception rates, retry behavior, support terms and the cost of completing a real business workflow.
 
 Published by AY Automate.
 
 ## Guide
-- [Find an agency for your first production workflow](https://topaiautomationagencies.com/)
+- [Workflow automation agencies: compare the cost per completed job](https://topaiautomationagencies.com/)
 - [Estimate the cost of automating one workflow](https://topaiautomationagencies.com/worksheet/)
 - [Automation agency pricing: fixed fee or retainer?](https://topaiautomationagencies.com/automation-agency-pricing/)
 
 ## Provider sources
-- [AY Automate](https://www.ayautomate.com/case-studies): Workflow implementation. Builds AI automations and publishes delivery case studies. Ask who owns each integration after handover.
-- [WeAreBrain](https://wearebrain.com/ai-automation-agency/): Workflow integration. Offers workflow automation and integration. Bring a process that crosses two systems and ask how failed writes are reconciled.
-- [Goodspeed](https://goodspeed.studio/n8n-agency): Operations workflows. Describes n8n workflows and AI agents for operations teams. Ask for an example of a workflow your own team could maintain.
-- [LowCode Agency](https://www.lowcode.agency/blog/ai-workflow-automation): Low-code delivery. Publishes a guide to AI agents that run business processes. Ask for a walkthrough of the approval and exception paths.
-- [Capgemini](https://www.capgemini.com/news/client-stories/zf-friedrichshafen-establishes-a-global-rpa-service-in-a-single-year/): Process automation. Documents the rollout of a global robotic process automation service at ZF. Ask how the team handles process exceptions.
-- [IBM Consulting](https://www.ibm.com/consulting/artificial-intelligence): Technology integration. Offers artificial intelligence consulting. Ask for a design showing how existing applications and data will connect.
-- [Slalom](https://www.slalom.com/us/en/services/artificial-intelligence): AI implementation. Describes AI consulting for enterprise teams. Ask who will build alongside your engineers and support the first release.
-- [Deloitte](https://www.deloitte.com/global/en/services/consulting/services/engineering-ai-data.html): Engineering and data. Groups engineering, AI and data delivery in one practice. Ask how platform work and application delivery would be costed separately.
-- [Accenture](https://www.accenture.com/en-us/support/state-texas-accenture-dir-artificial-intelligence): Enterprise delivery. Publishes an AI services offering under the Texas DIR contract. Check the scope and purchasing terms applicable to your organization.
-- [BCG](https://www.bcg.com/capabilities/artificial-intelligence): Enterprise transformation. Combines strategy and applied AI. Ask which operating decisions the first engagement would change.
+- [AY Automate](https://www.ayautomate.com/case-studies): Workflow implementation. Builds AI automations and publishes delivery case studies. Give the agency one document that needs correction and time the review. Include those minutes in the unit cost.
+- [WeAreBrain](https://wearebrain.com/ai-automation-agency/): Workflow integration. Offers workflow automation and integration. Test two suppliers replying to one dispatch request. Count how many assignments and customer notifications the workflow creates.
+- [Goodspeed](https://goodspeed.studio/n8n-agency): Operations workflows. Describes n8n workflows and AI agents for operations teams. If the quote includes training, ask staff to modify a live-style staging workflow and price their time in the savings calculation.
+- [LowCode Agency](https://www.lowcode.agency/blog/ai-workflow-automation): Low-code delivery. Publishes a guide to AI agents that run business processes. Request the cost of adding one approval rule after launch. Include platform usage and any minimum support commitment.
+- [Capgemini](https://www.capgemini.com/news/client-stories/zf-friedrichshafen-establishes-a-global-rpa-service-in-a-single-year/): Process automation. Documents the rollout of a global robotic process automation service at ZF. Ask for the cost of monitoring a backlog across two departments when only one of them supplies clean inputs.
+- [IBM Consulting](https://www.ibm.com/consulting/artificial-intelligence): Technology integration. Offers artificial intelligence consulting. Simulate a downstream outage in the trial and ask who pays for repeated integration calls while the dependency is unavailable.
+- [Slalom](https://www.slalom.com/us/en/services/artificial-intelligence): AI implementation. Describes AI consulting for enterprise teams. Request the volume and staffing assumptions behind a contact-routing automation. Count escalations that return to a human queue.
+- [Deloitte](https://www.deloitte.com/global/en/services/consulting/services/engineering-ai-data.html): Engineering and data. Groups engineering, AI and data delivery in one practice. Have the agency include data cleanup in the estimate when comparing manual and automated processing time.
+- [Accenture](https://www.accenture.com/en-us/support/state-texas-accenture-dir-artificial-intelligence): Enterprise delivery. Publishes an AI services offering under the Texas DIR contract. Compare the scope of the initial deployment with ongoing paid support. Ask for one example of a change billed separately.
+- [BCG](https://www.bcg.com/capabilities/artificial-intelligence): Enterprise transformation. Combines strategy and applied AI. For a multi-team rollout, calculate the monthly benefit for one workflow before adding the expected savings from other units.
 - [Remote MCP](https://topaiautomationagencies.com/mcp): search_firms, compare_firms and recommend_providers.
