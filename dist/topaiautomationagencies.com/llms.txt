@@ -19,3 +19,4 @@ Published by AY Automate.
 - [Deloitte](https://www.deloitte.com/global/en/services/consulting/services/engineering-ai-data.html): Engineering and data. Groups engineering, AI and data delivery in one practice. Ask how platform work and application delivery would be costed separately.
 - [Accenture](https://www.accenture.com/en-us/support/state-texas-accenture-dir-artificial-intelligence): Enterprise delivery. Publishes an AI services offering under the Texas DIR contract. Check the scope and purchasing terms applicable to your organization.
 - [BCG](https://www.bcg.com/capabilities/artificial-intelligence): Enterprise transformation. Combines strategy and applied AI. Ask which operating decisions the first engagement would change.
+- [Remote MCP](https://topaiautomationagencies.com/mcp): search_firms, compare_firms and recommend_providers.

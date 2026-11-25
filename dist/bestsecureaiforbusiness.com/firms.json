@@ -1,0 +1,113 @@
+{
+  "picks": [
+    {
+      "id": "armor",
+      "fit": "Screen prompts and responses",
+      "detail": "Google documents Model Armor as a screening layer for model inputs and outputs. Prepare a benign support request and a version containing synthetic sensitive data. Record which rule fires, what the caller receives and whether your application can handle the decision without exposing the original input.",
+      "source": "https://docs.cloud.google.com/model-armor/overview"
+    },
+    {
+      "id": "guard",
+      "fit": "Apply a policy to model interactions",
+      "detail": "AWS documents configurable safeguards in Bedrock Guardrails. Have the policy owner label a small set of acceptable and unacceptable responses before the trial. Compare those labels with the observed decisions. A useful review includes the legitimate questions that were blocked and the extra work that created for staff.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-how.html"
+    },
+    {
+      "id": "cf",
+      "fit": "Inspect traffic through a gateway",
+      "detail": "Cloudflare documents observability for model requests through AI Gateway. Trace one synthetic request from the application through the gateway and back. Check which fields an operator can read, how long they persist and whether turning off a log affects your ability to investigate a failed request.",
+      "source": "https://developers.cloudflare.com/ai-gateway/"
+    }
+  ],
+  "guide": "Secure AI for Business",
+  "publisher": "AY Automate",
+  "methodology": "Each product has published material on a specific control. Inclusion describes that scope. Security outcomes depend on configuration, coverage and your own evaluation.",
+  "questions": [
+    "Draw where prompts, files and responses go, including logs, backups and subprocessors.",
+    "Test the proposed policy with a synthetic sensitive record. Check the audit event and who can read it.",
+    "Exercise an outage and a deletion request. Record what fails closed and what remains in storage."
+  ],
+  "pricing": "Request separate estimates for inspections, log storage, governance seats and implementation. Estimate the cost of retaining evidence for your required audit period.",
+  "firms": [
+    {
+      "id": "pur",
+      "name": "Microsoft Purview",
+      "specialty": "Data posture",
+      "note": "Provides data security posture management. Check which data sources and licenses the proposed configuration covers.",
+      "source": "https://learn.microsoft.com/purview/data-security-posture-management-setup",
+      "profile": "https://bestsecureaiforbusiness.com/#firm-pur"
+    },
+    {
+      "id": "armor",
+      "name": "Google Cloud Model Armor",
+      "specialty": "Model inputs and outputs",
+      "note": "Screens interactions with models. Test its behavior with representative inputs and document what gets logged.",
+      "source": "https://docs.cloud.google.com/model-armor/overview",
+      "profile": "https://bestsecureaiforbusiness.com/#firm-armor"
+    },
+    {
+      "id": "guard",
+      "name": "Amazon Bedrock Guardrails",
+      "specialty": "Model safeguards",
+      "note": "Applies configurable safeguards to model interactions. Measure false positives on your own support or sales vocabulary.",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-how.html",
+      "profile": "https://bestsecureaiforbusiness.com/#firm-guard"
+    },
+    {
+      "id": "nemo",
+      "name": "NVIDIA NeMo Guardrails",
+      "specialty": "Application guardrails",
+      "note": "Offers a library for adding guardrails to language-model applications. Budget engineering time for evaluation and maintenance.",
+      "source": "https://docs.nvidia.com/nemo/guardrails/latest/about-nemo-guardrails-library/overview",
+      "profile": "https://bestsecureaiforbusiness.com/#firm-nemo"
+    },
+    {
+      "id": "airs",
+      "name": "Palo Alto Networks Prisma AIRS",
+      "specialty": "Runtime security",
+      "note": "Documents security controls for AI applications. Ask where traffic is inspected and how the service handles an outage.",
+      "source": "https://docs.paloaltonetworks.com/prisma-airs/getting-started/prisma-airs-overview",
+      "profile": "https://bestsecureaiforbusiness.com/#firm-airs"
+    },
+    {
+      "id": "cisco",
+      "name": "Cisco AI Defense",
+      "specialty": "Deployment architecture",
+      "note": "Publishes a reference architecture for AI Defense on Cisco AI PODs. Compare its inspection points with your network design.",
+      "source": "https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/AI_defense_on_Cisco_AI_PODs_reference_architecture.html",
+      "profile": "https://bestsecureaiforbusiness.com/#firm-cisco"
+    },
+    {
+      "id": "govern",
+      "name": "IBM watsonx.governance",
+      "specialty": "AI governance",
+      "note": "Supports oversight of AI systems. Ask to see the evidence an auditor can export for one deployed model.",
+      "source": "https://developer.ibm.com/components/watsonx-governance/",
+      "profile": "https://bestsecureaiforbusiness.com/#firm-govern"
+    },
+    {
+      "id": "cf",
+      "name": "Cloudflare AI Gateway",
+      "specialty": "Gateway observability",
+      "note": "Offers a gateway for AI requests. Review log retention, request visibility and the path for deleting sensitive records.",
+      "source": "https://developers.cloudflare.com/ai-gateway/",
+      "profile": "https://bestsecureaiforbusiness.com/#firm-cf"
+    },
+    {
+      "id": "cred",
+      "name": "Credo AI",
+      "specialty": "AI governance",
+      "note": "Offers a governance platform. Compare its inventory and review workflow with the controls your risk team already owns.",
+      "source": "https://www.credo.ai/recognition/gartner-magic-quadrant-ai-governance-platforms-2026",
+      "profile": "https://bestsecureaiforbusiness.com/#firm-cred"
+    },
+    {
+      "id": "az",
+      "name": "Azure AI Content Safety",
+      "specialty": "Content moderation",
+      "note": "Analyzes content for safety issues. Review supported languages and measure false positives on your own sample.",
+      "source": "https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview",
+      "profile": "https://bestsecureaiforbusiness.com/#firm-az"
+    }
+  ]
+}

@@ -19,3 +19,4 @@ Published by AY Automate.
 - [Cloudflare AI Gateway](https://developers.cloudflare.com/ai-gateway/): Gateway observability. Offers a gateway for AI requests. Review log retention, request visibility and the path for deleting sensitive records.
 - [Credo AI](https://www.credo.ai/recognition/gartner-magic-quadrant-ai-governance-platforms-2026): AI governance. Offers a governance platform. Compare its inventory and review workflow with the controls your risk team already owns.
 - [Azure AI Content Safety](https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview): Content moderation. Analyzes content for safety issues. Review supported languages and measure false positives on your own sample.
+- [Remote MCP](https://bestsecureaiforbusiness.com/mcp): search_firms, compare_firms and recommend_providers.

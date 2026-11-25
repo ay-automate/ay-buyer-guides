@@ -1,5 +1,26 @@
 {
-  "publisher": "AY Automate, a listed provider",
+  "picks": [
+    {
+      "id": "cap",
+      "fit": "Enterprise process automation",
+      "detail": "Capgemini’s ZF case describes a global RPA service. It is a relevant reference when several business units need a common operating model. In the RFP, ask which decisions the central team owns and which stay with a local process owner. Request one example of an automation rejected during discovery.",
+      "source": "https://www.capgemini.com/news/client-stories/zf-friedrichshafen-establishes-a-global-rpa-service-in-a-single-year/"
+    },
+    {
+      "id": "brain",
+      "fit": "ERP and supplier coordination",
+      "detail": "WeAreBrain describes automating supplier notifications and case updates for Truck Tyre Assist with ERP partner DooIT. Ask both who built the integration and who supports it. During evaluation, have the bidder trace a declined supplier request through reassignment and customer notification.",
+      "source": "https://wearebrain.com/work/automating-truck-tyre-assists-breakdown-operations-with-erp-and-ai/"
+    },
+    {
+      "id": "slalom",
+      "fit": "Customer support operations",
+      "detail": "Slalom’s Genie case identifies the client, the support function and a rollout involving 180 agents. Ask the delivery lead which parts of a comparable bid cover training, queue configuration and post-launch support. Price those separately so a cheaper prototype is easy to spot alongside a fully staffed rollout.",
+      "source": "https://www.slalom.com/us/en/customer-stories/genie-contact-center-agent-efficiency"
+    }
+  ],
+  "guide": "AI Consulting Firms",
+  "publisher": "AY Automate",
   "methodology": "The selection spans large consulting practices and smaller delivery teams with a public service description or case. Compare proposals against your own procurement requirements.",
   "questions": [
     "Ask for named delivery leads, their allocation and any subcontracted work.",

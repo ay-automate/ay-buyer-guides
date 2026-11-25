@@ -19,4 +19,4 @@ Published by AY Automate.
 - [AY Automate](https://www.ayautomate.com/case-studies): Workflow implementation. Builds AI automations and publishes delivery case studies. Ask who owns each integration after handover.
 - [WeAreBrain](https://wearebrain.com/ai-automation-agency/): Workflow integration. Offers workflow automation and integration. Bring a process that crosses two systems and ask how failed writes are reconciled.
 - [LowCode Agency](https://www.lowcode.agency/blog/ai-workflow-automation): Low-code delivery. Publishes a guide to AI agents that run business processes. Ask for a walkthrough of the approval and exception paths.
-- [Remote MCP](https://theaiconsultingfirms.com/mcp): Streamable HTTP. Tools: search_firms and compare_firms.
+- [Remote MCP](https://theaiconsultingfirms.com/mcp): search_firms, compare_firms and recommend_providers.

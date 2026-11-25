@@ -19,3 +19,4 @@ Published by AY Automate.
 - [Capgemini](https://www.capgemini.com/news/client-stories/zf-friedrichshafen-establishes-a-global-rpa-service-in-a-single-year/): Process automation. Documents the rollout of a global robotic process automation service at ZF. Ask how the team handles process exceptions.
 - [McKinsey QuantumBlack](https://www.mckinsey.com/capabilities/quantumblack/our-approach): Analytics and operating model. Describes a hybrid intelligence approach. Bring a decision that already has an accountable business owner.
 - [BCG](https://www.bcg.com/capabilities/artificial-intelligence): Enterprise transformation. Combines strategy and applied AI. Ask which operating decisions the first engagement would change.
+- [Remote MCP](https://theaiconsultingcompanies.com/mcp): search_firms, compare_firms and recommend_providers.

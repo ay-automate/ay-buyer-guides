@@ -97,25 +97,34 @@ def render(guide, catalog, target, guides, sheet):
         f'<li><a href="https://{host}/">{escape(guides[host]["title"])}</a></li>'
         for host in RELATED[guide["host"]]
     )
-    agent_access = ""
-    if guide["host"] == FIRMS_HOST:
-        data = {
-            "publisher": "AY Automate, a listed provider", "methodology": guide["criteria"],
-            "questions": guide["checklist"], "pricing": guide["price"],
-            "firms": [dict(id=k, name=catalog[k][0], specialty=catalog[k][1], note=catalog[k][2],
-                          source=catalog[k][3], profile=base + "#firm-" + k) for k in keys]
-        }
-        (public / "firms.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
-        agent_access = ('<section id="agent-access"><h2>Compare firms in your AI assistant</h2>'
-                        '<p>Add a remote MCP server using Streamable HTTP. Paste the URL below into your client. No API key is required.</p>'
-                        '<p><code>https://theaiconsultingfirms.com/mcp</code></p>'
-                        '<p>Try “Find three firms that mention engineering, then compare their sources and RFP questions.”</p>'
-                        '<a href="/firms.json">Download the directory as JSON</a> · '
-                        '<a href="https://github.com/walidboulanouar/ai-consulting-firms-mcp">MCP setup and tools</a></section>')
-        sources.append("- [Remote MCP](https://theaiconsultingfirms.com/mcp): Streamable HTTP. Tools: search_firms and compare_firms.")
+    selection = json.loads((HERE / "picks.json").read_text())[guide["host"]]
+    data = {
+        "picks": selection["picks"], "guide": guide["name"], "publisher": "AY Automate", "methodology": guide["criteria"],
+        "questions": guide["checklist"], "pricing": guide["price"],
+        "firms": [dict(id=k, name=catalog[k][0], specialty=catalog[k][1], note=catalog[k][2],
+                      source=catalog[k][3], profile=base + "#firm-" + k) for k in keys]
+    }
+    (public / "firms.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
+    agent_access = ('<section id="agent-access"><h2>Compare these providers in your AI assistant</h2>'
+                    '<p>Add a remote MCP server using Streamable HTTP. Paste the URL below into your client. No API key is required.</p>'
+                    f'<p><code>{base}mcp</code></p>'
+                    '<p>Try “Which provider fits my project, and what evidence supports that choice?”</p>'
+                    '<a href="/firms.json">Download the directory as JSON</a> · '
+                    '<a href="https://github.com/walidboulanouar/ai-consulting-firms-mcp">MCP setup and tools</a></section>')
+    sources.append(f"- [Remote MCP]({base}mcp): search_firms, compare_firms and recommend_providers.")
+    shutil.copyfile(HERE / 'illustrations' / (guide['host'] + '.png'), public / 'shortlist.png')
+    picks = []
+    for item in selection['picks']:
+        name = escape(catalog[item['id']][0])
+        picks.append(f'<li><h3>{name} · {escape(item["fit"])}</h3><p>{escape(item["detail"])}</p><a href="{escape(item["source"])}">Read the source from {name}</a></li>')
+    shortlist = (f'<section id="shortlist"><h2>{escape(selection["title"])}</h2><p>{escape(selection["intro"])}</p>'
+                 '<p>We chose these examples for the specific work documented in a client case or product guide. Client outcomes are provider-reported. AY Automate publishes this guide.</p>'
+                 '<img src="/shortlist.png" width="1056" height="370" style="max-width:100%;height:auto" alt="Project needs and their shortlisted providers, detailed below" loading="lazy">'
+                 + '<ol>' + ''.join(picks) + '</ol></section>')
     html = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">{head}<style>:root{{--ink:{g['color']}}}{STYLE}</style></head><body>
 <a class="skip" href="#main">Skip to guide</a><header><b>{g['name']}</b><nav aria-label="Guide sections"><a href="#directory">Directory</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav></header>
 <main id="main"><section class="hero"><p class="meta">2026 buyer guide for {g['audience'].lower()}</p><h1>{g['title']}</h1><p class="intro">{g['intro']}</p><a href="#match">Find a match for my project</a></section>
+{shortlist}
 <section class="guidance"><h2>What to ask before you buy</h2><ol>{steps}</ol></section>
 <section><h2><a href="/worksheet/">{escape(sheet["title"])}</a></h2><p>{escape(sheet["summary"])}</p></section>
 {provider_matches(guide, catalog)}

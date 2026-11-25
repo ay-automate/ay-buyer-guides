@@ -1,0 +1,146 @@
+{
+  "topaiconsultingservices.com": {
+    "title": "Three AI consulting services to shortlist by deliverable",
+    "intro": "A finance director asking for an AI strategy and a support lead replacing an agent desktop can receive nearly identical proposals. Start with what your team needs to accept at the end of the engagement. These three cases give you different deliverables to put in a brief.",
+    "picks": [
+      {
+        "id": "slalom",
+        "fit": "A contact-center rollout",
+        "detail": "Slalom describes moving 180 Genie agents onto a new contact-center solution. That makes it a useful first interview for a support leader who owns routing, agent training and service continuity. Ask to see the release plan for the first queue and an example of an issue the operations team could fix after handover.",
+        "source": "https://www.slalom.com/us/en/customer-stories/genie-contact-center-agent-efficiency"
+      },
+      {
+        "id": "cap",
+        "fit": "A shared automation service",
+        "detail": "Capgemini describes establishing a global automation service with ZF. A buyer funding several teams can use that case to ask who decides which workflow gets built next. Request a backlog example with the estimated effort, business owner and sign-off for a completed automation.",
+        "source": "https://www.capgemini.com/news/client-stories/zf-friedrichshafen-establishes-a-global-rpa-service-in-a-single-year/"
+      },
+      {
+        "id": "ay",
+        "fit": "Document checks with exceptions",
+        "detail": "AY Automate publishes a workforce compliance case involving document verification for festival crews. A coordinator buying a similar service should bring an expired document, an unreadable scan and a record that needs human review. Ask the team to show the outcome for all three before pricing a rollout.",
+        "source": "https://www.ayautomate.com/case-studies/compliance-automation"
+      }
+    ]
+  },
+  "topaiagentsforbusiness.com": {
+    "title": "Three business agent options to trial on one task",
+    "intro": "Use a single request from your own backlog for every trial. A demo that drafts a reply is a different purchase from an agent allowed to change a customer record. Record the systems touched, the approval step and the cost of a failed run.",
+    "picks": [
+      {
+        "id": "zap",
+        "fit": "Actions across connected apps",
+        "detail": "Zapier documents the actions available to its agents through connected applications. Start with a reversible step such as creating a draft. Give the agent two records with similar names, watch which one it selects and check whether an operator can see the inputs that led to that choice.",
+        "source": "https://help.zapier.com/hc/en-us/articles/26028298697485-Use-actions-on-Zapier-Agents"
+      },
+      {
+        "id": "ms",
+        "fit": "An agent for Microsoft workflows",
+        "detail": "Copilot Studio is a candidate when staff already work inside Microsoft tools. Its documentation explains how agents combine knowledge and actions. Have two employees with different permissions ask about the same internal document. Capture the response and the underlying access settings before connecting an action that can edit records.",
+        "source": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-overview"
+      },
+      {
+        "id": "ibmo",
+        "fit": "Coordinating several business tasks",
+        "detail": "IBM describes agents in watsonx Orchestrate for business workflows. Ask for a trial that hands a task from one team to another. Stop it immediately after a downstream action succeeds, then resume it. Count the records created and check who can resolve the run when a dependency is unavailable.",
+        "source": "https://www.ibm.com/products/watsonx-orchestrate/ai-agents"
+      }
+    ]
+  },
+  "bestsecureaiforbusiness.com": {
+    "title": "Three AI security tools to test at different layers",
+    "intro": "A security review can cover prompts, model responses and request logs. Buying one control does not answer all three questions. Choose the layer that owns the risk, then test it with synthetic examples your reviewers can share with the vendor.",
+    "picks": [
+      {
+        "id": "armor",
+        "fit": "Screen prompts and responses",
+        "detail": "Google documents Model Armor as a screening layer for model inputs and outputs. Prepare a benign support request and a version containing synthetic sensitive data. Record which rule fires, what the caller receives and whether your application can handle the decision without exposing the original input.",
+        "source": "https://docs.cloud.google.com/model-armor/overview"
+      },
+      {
+        "id": "guard",
+        "fit": "Apply a policy to model interactions",
+        "detail": "AWS documents configurable safeguards in Bedrock Guardrails. Have the policy owner label a small set of acceptable and unacceptable responses before the trial. Compare those labels with the observed decisions. A useful review includes the legitimate questions that were blocked and the extra work that created for staff.",
+        "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-how.html"
+      },
+      {
+        "id": "cf",
+        "fit": "Inspect traffic through a gateway",
+        "detail": "Cloudflare documents observability for model requests through AI Gateway. Trace one synthetic request from the application through the gateway and back. Check which fields an operator can read, how long they persist and whether turning off a log affects your ability to investigate a failed request.",
+        "source": "https://developers.cloudflare.com/ai-gateway/"
+      }
+    ]
+  },
+  "theaiconsultingfirms.com": {
+    "title": "Three AI consulting firms to put on an RFP shortlist",
+    "intro": "A shortlist is useful when the procurement team can explain why each firm is in the room. Choose the bidder whose public delivery evidence resembles the work you are buying. Send the same acceptance scenario to everyone invited to quote.",
+    "picks": [
+      {
+        "id": "cap",
+        "fit": "Enterprise process automation",
+        "detail": "Capgemini’s ZF case describes a global RPA service. It is a relevant reference when several business units need a common operating model. In the RFP, ask which decisions the central team owns and which stay with a local process owner. Request one example of an automation rejected during discovery.",
+        "source": "https://www.capgemini.com/news/client-stories/zf-friedrichshafen-establishes-a-global-rpa-service-in-a-single-year/"
+      },
+      {
+        "id": "brain",
+        "fit": "ERP and supplier coordination",
+        "detail": "WeAreBrain describes automating supplier notifications and case updates for Truck Tyre Assist with ERP partner DooIT. Ask both who built the integration and who supports it. During evaluation, have the bidder trace a declined supplier request through reassignment and customer notification.",
+        "source": "https://wearebrain.com/work/automating-truck-tyre-assists-breakdown-operations-with-erp-and-ai/"
+      },
+      {
+        "id": "slalom",
+        "fit": "Customer support operations",
+        "detail": "Slalom’s Genie case identifies the client, the support function and a rollout involving 180 agents. Ask the delivery lead which parts of a comparable bid cover training, queue configuration and post-launch support. Price those separately so a cheaper prototype is easy to spot alongside a fully staffed rollout.",
+        "source": "https://www.slalom.com/us/en/customer-stories/genie-contact-center-agent-efficiency"
+      }
+    ]
+  },
+  "theaiconsultingcompanies.com": {
+    "title": "Three AI consulting companies to assess for handover",
+    "intro": "Pick a company whose delivery team can leave your operators with a working system. A reference call is most useful when someone who ran the system after launch joins it. These cases suggest three different handover exercises.",
+    "picks": [
+      {
+        "id": "brain",
+        "fit": "An ERP workflow with external partners",
+        "detail": "WeAreBrain names both Truck Tyre Assist and the ERP partner on its breakdown-operations project. Ask a potential delivery team to map ownership of a supplier notification that fails after dispatch. Your operator should be able to find the case, determine its status and reach the right support contact.",
+        "source": "https://wearebrain.com/work/automating-truck-tyre-assists-breakdown-operations-with-erp-and-ai/"
+      },
+      {
+        "id": "slalom",
+        "fit": "A service desk used across regions",
+        "detail": "Genie’s contact-center project with Slalom covered technology and change management. Ask the bidder to let a supervisor change a queue rule in staging using the written handover. Time the exercise and record where the supervisor needed vendor help. Those gaps belong in the last delivery milestone.",
+        "source": "https://www.slalom.com/us/en/customer-stories/genie-contact-center-agent-efficiency"
+      },
+      {
+        "id": "cap",
+        "fit": "An automation program shared by business units",
+        "detail": "ZF and Capgemini established a global RPA service. Use the example to ask how a newly hired process owner learns to propose, test and retire an automation. Request a walkthrough of the approval record, the rollback instructions and the person responsible for the next improvement.",
+        "source": "https://www.capgemini.com/news/client-stories/zf-friedrichshafen-establishes-a-global-rpa-service-in-a-single-year/"
+      }
+    ]
+  },
+  "topaiautomationagencies.com": {
+    "title": "Three automation agencies to evaluate by workflow",
+    "intro": "The right agency depends on what happens when a case falls outside the happy path. An unanswered supplier request, a document exception and a backlog shared by several departments need different kinds of delivery experience.",
+    "picks": [
+      {
+        "id": "brain",
+        "fit": "Dispatch and supplier responses",
+        "detail": "WeAreBrain’s Truck Tyre Assist case describes supplier notifications, acceptance handling and status updates in an ERP workflow. In a trial, ask two suppliers to respond to one case. Check that a dispatcher can see who accepted it and what happens to the second response.",
+        "source": "https://wearebrain.com/work/automating-truck-tyre-assists-breakdown-operations-with-erp-and-ai/"
+      },
+      {
+        "id": "ay",
+        "fit": "Document verification with human review",
+        "detail": "AY Automate’s published compliance project describes replacing manual checks in a festival staffing workflow. Bring synthetic records with a mismatch, a missing field and an expiring document. Look for a clear review queue and ask who is allowed to override a result.",
+        "source": "https://www.ayautomate.com/case-studies/compliance-automation"
+      },
+      {
+        "id": "cap",
+        "fit": "Automation across several departments",
+        "detail": "The ZF case documents Capgemini’s work on a global automation service. For a buyer with several candidate workflows, the first deliverable could be a prioritized backlog. Ask each process owner to identify the exception that consumes the most time, then check whether the proposed pilot includes it.",
+        "source": "https://www.capgemini.com/news/client-stories/zf-friedrichshafen-establishes-a-global-rpa-service-in-a-single-year/"
+      }
+    ]
+  }
+}

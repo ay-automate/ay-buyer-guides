@@ -19,3 +19,4 @@ Published by AY Automate.
 - [Capgemini](https://www.capgemini.com/news/client-stories/zf-friedrichshafen-establishes-a-global-rpa-service-in-a-single-year/): Process automation. Documents the rollout of a global robotic process automation service at ZF. Ask how the team handles process exceptions.
 - [WeAreBrain](https://wearebrain.com/ai-automation-agency/): Workflow integration. Offers workflow automation and integration. Bring a process that crosses two systems and ask how failed writes are reconciled.
 - [Goodspeed](https://goodspeed.studio/n8n-agency): Operations workflows. Describes n8n workflows and AI agents for operations teams. Ask for an example of a workflow your own team could maintain.
+- [Remote MCP](https://topaiconsultingservices.com/mcp): search_firms, compare_firms and recommend_providers.
