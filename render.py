@@ -100,6 +100,9 @@ def decision_page(guide, article, base):
 <section id="rehearsal"><p class="meta">Illustrative buyer scenario</p><h2>{escape(field['headline'])}</h2><p>{escape(field['scenario'])}</p><p>{escape(field['test'])}</p><div class="fieldnotes">{evidence}</div></section>
 <section class="example" id="decision"><h2>Make the decision</h2><p>{escape(article['decision'])}</p><a class="button" href="/worksheet/">Open the buyer worksheet &rarr;</a></section>
 <section><h2>Further reading</h2><a href="{escape(article['url'])}">{escape(article['source'])}</a></section>"""
+    if article['slug'] == 'ai-vendor-security-questionnaire':
+        toc.insert(0, ('file-expiry', 'Review a file expiry decision'))
+        body = (HERE / 'file-expiry.html').read_text() + body
     if article['slug'] == 'ai-consulting-pricing':
         toc.insert(0, ('published-scopes', 'Compare two published scopes'))
         body = (HERE / 'scope-comparison.html').read_text() + body
