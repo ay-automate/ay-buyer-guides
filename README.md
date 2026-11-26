@@ -13,7 +13,7 @@ Six independent guides for teams buying AI services. Each directory entry includ
 
 ## Build the guides
 
-Run `python3 render.py dist` from the repository root. Open `dist/<domain>/index.html` or serve that directory with any static web server. Each site has its own favicon, canonical URLs, robots.txt, llms.txt and XML sitemap. Each sitemap includes the homepage, the buyer worksheet and a domain-specific decision guide. Edit decisions.json for the decision guides. Edit worksheets.json to update the examples and decision tables. Source icons live under icons/. Each site generates its own firms.json catalog.
+Run `npm ci --ignore-scripts` followed by `npm run build` from the repository root. Open `dist/<domain>/index.html` or serve that directory with any static web server. Each site has its own favicon, canonical URLs, robots.txt, llms.txt and XML sitemap. Each sitemap includes the homepage, the buyer worksheet and a domain-specific decision guide. Edit decisions.json for the decision guides. Edit worksheets.json to update the examples and decision tables. Source icons live under icons/. Each site generates its own firms.json catalog.
 
 The public source corresponds to the published guides. Live releases run through the publisher’s separate deployment repository.
 
@@ -55,3 +55,5 @@ These Cloudflare Pages projects have separate sitemaps.
 | [ai-agencies](https://ai-agencies.pages.dev/) | [XML](https://ai-agencies.pages.dev/sitemap.xml) |
 
 The design system is in guide.css. Edit fieldwork.json for the six buyer scenarios, decision diagrams and editable worksheet prompts. The renderer includes every generated canonical HTML page in its site’s sitemap.
+
+The six sites share Next.js Pages Router components. The production build exports each domain to its own directory under `dist/`. Native links, details and worksheet controls work without client JavaScript.
