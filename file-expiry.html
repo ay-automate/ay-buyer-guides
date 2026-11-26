@@ -1,0 +1,11 @@
+<section id="file-expiry">
+<p class="meta">Illustrative procurement decision</p>
+<h2>Can legal upload a client contract?</h2>
+<p>A legal team is buying a contract summarizer. One condition for approval is that uploaded originals must become unavailable through the vendor’s API within 24 hours of upload. The team sets that limit.</p>
+<h3>What procurement asks for</h3>
+<p>Upload a synthetic contract through the same workflow a lawyer would use. Supply the redacted file ID, creation time and configured expiry. Using the same authorized account, show a successful retrieval before expiry and the result just after the deadline. Retrieve a second, unexpired test file at the same time to show the account still has access.</p>
+<h3>What the vendor returns</h3>
+<p>In this example, the vendor supplies a product guide and a screenshot of a “Delete after one day” setting. The guide confirms that OpenAI’s Files API supports automatic expiry through <code>expires_after</code>. The screenshot shows the intended setting. Neither item shows what happened to a file uploaded through this vendor’s integration. <a href="https://developers.openai.com/api/docs/guides/your-data">OpenAI’s data controls guide, Files API section</a>.</p>
+<h3>What the buyer signs</h3>
+<p><strong>Approve a synthetic-data pilot. Hold client contracts.</strong> Vendor engineering owns the missing retrieval record. The security reviewer can accept the API-access condition when the expired file is unavailable at the deadline and the control file remains readable. If either result differs, keep the hold and repeat the test after a fix. Legal must review retention of extracted text, logs and backups separately before approving client documents.</p>
+</section>
