@@ -1,8 +1,298 @@
 [
- {"host":"topaiconsultingservices.com","name":"AI Consulting Services","title":"AI consulting services: scope your pilot before you buy","intro":"Compare discovery, integration and pilot deliverables from ten AI consultancies. Use a sample acceptance test to price the work your team actually needs.","color":"#205747","audience":"Service buyers","providers":"ay bcg ibm slalom mck accent deloitte cap brain good","matching":{"title":"Find a consulting partner for your project","needs":{"Plan an AI rollout across teams":["bcg","mck","accent"],"Build and integrate an AI application":["ibm","slalom","deloitte"],"Automate a business process":["ay","cap","brain","good"]}},"criteria":"Compare the deliverable each service could produce: a scoped backlog, a working integration or a pilot your operator can accept. The directory gives you a deliverable to request from each bidder.","checklist":["For an assessment, ask for a prioritized backlog with an owner and a baseline for each opportunity.","For a pilot, agree on a test dataset, an acceptance threshold and the decisions a human will retain.","For a rollout, get a handover plan covering monitoring, recurring costs and incident response."],"price":"Request separate prices for discovery, implementation and ongoing support. Compare the cost of the first accepted workflow and the monthly cost to keep it running.","faq":"What should a paid discovery deliver?","answer":"Ask for a baseline, a process map, a data-access assessment and a short implementation estimate you can take to a second provider.","case":"IBM’s UHCW NHS Trust case describes working with Celonis and the trust to identify opportunities and pilot technology for productivity. For a discovery purchase, ask the consultant to show which finding changed the pilot scope and what evidence would stop the project before implementation.","source":"https://www.ibm.com/case-studies/uhcw-nhs-trust","review_questions":{"ay":"Ask for a pilot that takes one document from intake to a human-approved exception. Specify who labels the acceptance examples.","bcg":"For a strategy purchase, request a sequenced opportunity list, one accountable sponsor per item and an explicit reason to decline the weakest item.","ibm":"Before funding integration, ask for a map of the source systems and a running test against one of your representative records.","slalom":"Write down the smallest queue the team could launch. Request a cutover rehearsal and a training deliverable in the fixed scope.","mck":"Request an operating-model design that names the decision owner and shows how a disputed model output is reviewed.","accent":"Separate the statement of work into discovery, build and rollout. Mark which deliverable releases each payment.","deloitte":"Specify which dataset must be usable at the end of engineering discovery. Ask for quality checks your engineer can repeat.","cap":"For a shared process service, request a backlog intake exercise with two departments competing for the same delivery capacity.","brain":"If the service connects an ERP to another system, ask for one failed transaction to be replayed safely before acceptance.","good":"Ask for a working automation and a handover exercise. Price employee time spent learning the workflow as a buyer contribution."}},
- {"host":"topaiagentsforbusiness.com","name":"Business Agent Guide","title":"AI agents for the systems your business already uses","intro":"Choose one task that ends in a visible action, such as updating an order or routing a support case. Then compare the agent platforms that can complete it.","color":"#243e81","audience":"Operations teams","providers":"ms sf gc aws sap ibmo workato zap ui ay","matching":{"title":"Find an agent platform or implementation partner","needs":{"Add an agent to our CRM, ERP or Microsoft tools":["sf","sap","ms"],"Build an agent on our cloud infrastructure":["gc","aws"],"Connect agents to the apps we already use":["ibmo","workato","zap","ui"],"Get help implementing an agent workflow":["ay"]}},"criteria":"This list covers CRM, ERP, cloud and cross-app workflows. AY Automate appears as an implementation service for teams that want help building their workflow.","checklist":["Give each vendor the same ten representative tasks and record which actions complete correctly.","Repeat the test as a user with fewer permissions. Check both data visibility and write access.","Interrupt a workflow halfway through. Inspect retries, duplicate records and the human handoff."],"price":"Ask for a quote at your expected task volume. Include platform seats, model calls, action or connector charges and human review. Divide the total by successfully completed tasks.","faq":"Can an agent update production records?","answer":"That depends on the connector, its credentials and the actions you enable. Start with a draft or approval step so the system owner can inspect the proposed change.","case":"Zapier’s documentation shows how actions connect an agent to other apps. Use one documented action as the starting point for a two-system trial.","source":"https://help.zapier.com/hc/en-us/articles/26028298697485-Use-actions-on-Zapier-Agents"},
- {"host":"bestsecureaiforbusiness.com","name":"Secure AI for Business","title":"How to compare AI security controls","intro":"A risk register, a content filter and a runtime inspection tool answer different questions. Map your data path first, then buy the control that covers the gap.","color":"#5a345e","audience":"Security and risk teams","providers":"pur armor guard nemo airs cisco govern cf cred az","matching":{"title":"Find tools for your AI security review","needs":{"Check what goes into and comes out of a model":["armor","guard","nemo","az"],"Monitor requests and protect the deployment":["cf","airs","cisco"],"Track data access and document AI governance":["pur","govern","cred"]}},"criteria":"Each product has published material on a specific control. Inclusion describes that scope. Security outcomes depend on configuration, coverage and your own evaluation.","checklist":["Draw where prompts, files and responses go, including logs, backups and subprocessors.","Test the proposed policy with a synthetic sensitive record. Check the audit event and who can read it.","Exercise an outage and a deletion request. Record what fails closed and what remains in storage."],"price":"Request separate estimates for inspections, log storage, governance seats and implementation. Estimate the cost of retaining evidence for your required audit period.","faq":"Does buying a guardrail make an AI deployment compliant?","answer":"A guardrail covers a specific interaction. Your team still needs to establish lawful access, retention, review ownership and evidence for its applicable requirements.","case":"Cisco publishes an AI Defense reference architecture for its AI PODs. Use the architecture to compare inspection points with your own model deployment.","source":"https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/AI_defense_on_Cisco_AI_PODs_reference_architecture.html"},
- {"host":"theaiconsultingfirms.com","name":"AI Consulting Firms","title":"AI consulting firms: build a defensible RFP shortlist","intro":"Shortlist ten AI consulting firms for an RFP. Compare bid evidence, named staff, contract scope and what each finalist must demonstrate.","color":"#733a26","audience":"Procurement teams","providers":"accent bcg cap deloitte ibm mck slalom ay brain low","matching":{"title":"Find a firm for your shortlist","needs":{"Plan a company-wide AI program":["bcg","mck","accent"],"Build a system and connect it to our data":["deloitte","ibm","slalom"],"Automate a process or build a low-code workflow":["cap","ay","brain","low"]}},"criteria":"Evaluate each firm as a bidder. Give finalists the same scenario and request documentary evidence for staffing, commercial scope and acceptance. Record an unanswered condition separately from a scored answer.","checklist":["Ask for named delivery leads, their allocation and any subcontracted work.","Request a reference in a similar operating environment. Ask the client what happened after go-live.","Require a sample statement of work with acceptance criteria, data handling and exit rights."],"price":"Ask for role-level rates, a milestone estimate and change-order terms. Normalize proposals to the same team size and time horizon before scoring cost.","faq":"How many consulting firms should reach the final round?","answer":"Choose a group small enough to review thoroughly. Three comparable proposals can expose differences in staffing, commercial terms and support obligations.","case":"Accenture’s Texas DIR AI services page identifies contract DIR-CPO-5153 and directs eligible customers to the service agreement in Appendix D. Use this as an example of a procurement artifact: compare the advertised service categories with the deliverables, assumptions and acceptance conditions in the actual statement of work.","source":"https://www.accenture.com/en-us/support/state-texas-accenture-dir-artificial-intelligence","review_questions":{"accent":"Request the proposed statement of work and ask the bidder to map each mandatory requirement to its contract clause.","bcg":"Ask which executive sponsor and delivery lead would answer an escalation. Score the named team attending the bid review.","cap":"Request a reference for a program spanning multiple business units and ask what the client had to supply during rollout.","deloitte":"Give the bid team a sample data-quality exception. Score the proposed ownership and cost of remediation.","ibm":"Request the responsibilities of the consulting team and software partners separately, including the support boundary.","mck":"Have the bid team show how an operations owner can challenge a model recommendation and record the ruling.","slalom":"Ask for the rollout lead to attend the reference interview. Compare promised training with what the named client received.","ay":"Ask which party owns the labeled examples and how the bidder will document reviewer overrides during acceptance.","brain":"Require a responsibility table for the agency and its ERP partner. Ask who handles incidents spanning both systems.","low":"For a low-code bid, request export rights, platform fees and access rules in the same commercial response."}},
- {"host":"theaiconsultingcompanies.com","name":"AI Consulting Companies","title":"AI implementation partners: who runs the system after launch?","intro":"Choose an AI implementation partner by testing release ownership, operator training, recovery and handover before signing the final milestone.","color":"#304e62","audience":"Product and engineering leads","providers":"slalom ibm deloitte ay low good brain cap mck bcg","matching":{"title":"Find a delivery team for your project","needs":{"Integrate AI with existing software and data":["slalom","ibm","deloitte"],"Build an operational workflow":["ay","low","good","brain","cap"],"Design how teams will use AI across the business":["mck","bcg"]}},"criteria":"Assess whether your own team can operate the delivered application. Ask every candidate to stage one buyer-led exercise using a company-owned account; document the access, instructions and fallback support it requires.","checklist":["If your engineers will take over, ask for a sample repository, runbook and handover schedule.","If the provider will operate the system, agree on incident coverage, escalation and the cost of changes.","Identify who owns evaluation data, infrastructure accounts and deployment access from day one."],"price":"Compare build-and-handover with managed operation over twelve months. Include your own engineers’ time, vendor support and migration costs.","faq":"Who should own the code and infrastructure accounts?","answer":"Write the arrangement into the contract. A team that expects to take over needs repository access, operating instructions and a tested way to deploy independently.","case":"Slalom’s Genie account describes communications, training and testing alongside a migration of 180 support agents. That provides a concrete reference for rollout and adoption. It leaves a separate question for your handover rehearsal: can one of your supervisors make a routing change, validate it and undo it using the written procedure?","source":"https://www.slalom.com/us/en/customer-stories/genie-contact-center-agent-efficiency","review_questions":{"slalom":"Ask a contact-center supervisor to change one staging queue before the vendor leaves. Capture the evidence the supervisor used to check routing.","ibm":"Have an internal engineer trace a failing integration across the vendor and platform support boundaries using a single request ID.","deloitte":"Ask your engineer to reproduce a dataset build, inspect a failed check and identify which schema version was deployed.","ay":"Have a business reviewer resolve a synthetic document exception, then show where the operator can audit the decision.","low":"Try exporting a small application change and restoring it in a clean workspace owned by your company.","good":"Ask an operations employee to change an automation after training and explain how to roll it back without waiting for a vendor call.","brain":"Have your operator recover a supplier request that reached the ERP but did not reach the recipient. Time the exercise.","cap":"Ask an internal process lead to submit, test and retire one automation under the proposed governance model.","mck":"Give the buyer’s model owner a drift alert and ask them to identify who can suspend the affected decision.","bcg":"Request a transition plan with a named business owner, successor and rehearsal date for each operating role."}},
- {"host":"topaiautomationagencies.com","name":"AI Automation Agencies","title":"Workflow automation agencies: compare the cost per completed job","intro":"Evaluate automation agencies using exception rates, retry behavior, support terms and the cost of completing a real business workflow.","color":"#734222","audience":"Operators and founders","providers":"ay brain good low cap ibm slalom deloitte accent bcg","matching":{"title":"Find an agency for your workflow","needs":{"Automate a manual workflow":["ay","brain","good","low","cap"],"Connect automation to our systems and data":["ibm","slalom","deloitte"],"Roll out automation across business units":["accent","bcg"]}},"criteria":"Compare agency proposals on one unit of work, such as a dispatched case or an approved order. Count failed attempts, manual review and maintenance when testing the agency’s saving estimate.","checklist":["Bring five anonymized examples, including a duplicate and an incomplete request.","Ask to see the audit trail for one completed run and one failed run.","Before handover, have your operator replay a failed job and confirm that it creates only one downstream record."],"price":"Compare the setup fee, support retainer and per-run costs at your normal and peak volumes. Ask whether connector changes and failed-job investigation are included.","faq":"Which process should we automate first?","answer":"Pick a repeated task with clear inputs, a measurable completion event and an operator who can review exceptions. A reversible workflow gives you room to tune the system.","case":"Goodspeed describes a six-week n8n program at Oyster in which employees learned to build workflows from their own jobs. The agency labels the annual dollar impact as projected. Ask a bidder to show the original time sample, the number of completed runs and the maintenance hours behind a similar forecast.","source":"https://goodspeed.studio/casestudy/oyster","review_questions":{"ay":"Give the agency one document that needs correction and time the review. Include those minutes in the unit cost.","brain":"Test two suppliers replying to one dispatch request. Count how many assignments and customer notifications the workflow creates.","good":"If the quote includes training, ask staff to modify a live-style staging workflow and price their time in the savings calculation.","low":"Request the cost of adding one approval rule after launch. Include platform usage and any minimum support commitment.","cap":"Ask for the cost of monitoring a backlog across two departments when only one of them supplies clean inputs.","ibm":"Simulate a downstream outage in the trial and ask who pays for repeated integration calls while the dependency is unavailable.","slalom":"Request the volume and staffing assumptions behind a contact-routing automation. Count escalations that return to a human queue.","deloitte":"Have the agency include data cleanup in the estimate when comparing manual and automated processing time.","accent":"Compare the scope of the initial deployment with ongoing paid support. Ask for one example of a change billed separately.","bcg":"For a multi-team rollout, calculate the monthly benefit for one workflow before adding the expected savings from other units."}}
+  {
+    "host": "topaiconsultingservices.com",
+    "name": "AI Consulting Services",
+    "title": "AI consulting services: scope your pilot before you buy",
+    "intro": "Compare discovery, integration and pilot deliverables from ten AI consultancies. Use a sample acceptance test to price the work your team actually needs.",
+    "color": "#205747",
+    "audience": "Service buyers",
+    "providers": "bcg ibm slalom mck accent deloitte cap brain good low",
+    "matching": {
+      "title": "Find a consulting partner for your project",
+      "needs": {
+        "Plan an AI rollout across teams": [
+          "bcg",
+          "mck",
+          "accent"
+        ],
+        "Build and integrate an AI application": [
+          "ibm",
+          "slalom",
+          "deloitte"
+        ],
+        "Automate a business process": [
+          "cap",
+          "brain",
+          "good",
+          "low"
+        ]
+      }
+    },
+    "criteria": "Compare the deliverable each service could produce: a scoped backlog, a working integration or a pilot your operator can accept. The directory gives you a deliverable to request from each bidder.",
+    "checklist": [
+      "For an assessment, ask for a prioritized backlog with an owner and a baseline for each opportunity.",
+      "For a pilot, agree on a test dataset, an acceptance threshold and the decisions a human will retain.",
+      "For a rollout, get a handover plan covering monitoring, recurring costs and incident response."
+    ],
+    "price": "Request separate prices for discovery, implementation and ongoing support. Compare the cost of the first accepted workflow and the monthly cost to keep it running.",
+    "faq": "What should a paid discovery deliver?",
+    "answer": "Ask for a baseline, a process map, a data-access assessment and a short implementation estimate you can take to a second provider.",
+    "case": "IBM’s UHCW NHS Trust case describes working with Celonis and the trust to identify opportunities and pilot technology for productivity. For a discovery purchase, ask the consultant to show which finding changed the pilot scope and what evidence would stop the project before implementation.",
+    "source": "https://www.ibm.com/case-studies/uhcw-nhs-trust",
+    "review_questions": {
+      "bcg": "For a strategy purchase, request a sequenced opportunity list, one accountable sponsor per item and an explicit reason to decline the weakest item.",
+      "ibm": "Before funding integration, ask for a map of the source systems and a running test against one of your representative records.",
+      "slalom": "Write down the smallest queue the team could launch. Request a cutover rehearsal and a training deliverable in the fixed scope.",
+      "mck": "Request an operating-model design that names the decision owner and shows how a disputed model output is reviewed.",
+      "accent": "Separate the statement of work into discovery, build and rollout. Mark which deliverable releases each payment.",
+      "deloitte": "Specify which dataset must be usable at the end of engineering discovery. Ask for quality checks your engineer can repeat.",
+      "cap": "For a shared process service, request a backlog intake exercise with two departments competing for the same delivery capacity.",
+      "brain": "If the service connects an ERP to another system, ask for one failed transaction to be replayed safely before acceptance.",
+      "good": "Ask for a working automation and a handover exercise. Price employee time spent learning the workflow as a buyer contribution.",
+      "low": "Which past project matches our scope, and who owned delivery and handover?"
+    }
+  },
+  {
+    "host": "topaiagentsforbusiness.com",
+    "name": "Business Agent Guide",
+    "title": "AI agents for the systems your business already uses",
+    "intro": "Choose one task that ends in a visible action, such as updating an order or routing a support case. Then compare the agent platforms that can complete it.",
+    "color": "#243e81",
+    "audience": "Operations teams",
+    "providers": "ms sf gc aws sap ibmo workato zap ui cap",
+    "matching": {
+      "title": "Find an agent platform or implementation partner",
+      "needs": {
+        "Add an agent to our CRM, ERP or Microsoft tools": [
+          "sf",
+          "sap",
+          "ms"
+        ],
+        "Build an agent on our cloud infrastructure": [
+          "gc",
+          "aws"
+        ],
+        "Connect agents to the apps we already use": [
+          "ibmo",
+          "workato",
+          "zap",
+          "ui"
+        ],
+        "Get help implementing an agent workflow": [
+          "cap"
+        ]
+      }
+    },
+    "criteria": "Compare CRM, ERP, cloud and cross-app workflows by the systems each option supports. Evaluate implementation services separately from software platforms.",
+    "checklist": [
+      "Give each vendor the same ten representative tasks and record which actions complete correctly.",
+      "Repeat the test as a user with fewer permissions. Check both data visibility and write access.",
+      "Interrupt a workflow halfway through. Inspect retries, duplicate records and the human handoff."
+    ],
+    "price": "Ask for a quote at your expected task volume. Include platform seats, model calls, action or connector charges and human review. Divide the total by successfully completed tasks.",
+    "faq": "Can an agent update production records?",
+    "answer": "That depends on the connector, its credentials and the actions you enable. Start with a draft or approval step so the system owner can inspect the proposed change.",
+    "case": "Zapier’s documentation shows how actions connect an agent to other apps. Use one documented action as the starting point for a two-system trial.",
+    "source": "https://help.zapier.com/hc/en-us/articles/26028298697485-Use-actions-on-Zapier-Agents"
+  },
+  {
+    "host": "bestsecureaiforbusiness.com",
+    "name": "Secure AI for Business",
+    "title": "How to compare AI security controls",
+    "intro": "A risk register, a content filter and a runtime inspection tool answer different questions. Map your data path first, then buy the control that covers the gap.",
+    "color": "#5a345e",
+    "audience": "Security and risk teams",
+    "providers": "pur armor guard nemo airs cisco govern cf cred az",
+    "matching": {
+      "title": "Find tools for your AI security review",
+      "needs": {
+        "Check what goes into and comes out of a model": [
+          "armor",
+          "guard",
+          "nemo",
+          "az"
+        ],
+        "Monitor requests and protect the deployment": [
+          "cf",
+          "airs",
+          "cisco"
+        ],
+        "Track data access and document AI governance": [
+          "pur",
+          "govern",
+          "cred"
+        ]
+      }
+    },
+    "criteria": "Each product has published material on a specific control. Inclusion describes that scope. Security outcomes depend on configuration, coverage and your own evaluation.",
+    "checklist": [
+      "Draw where prompts, files and responses go, including logs, backups and subprocessors.",
+      "Test the proposed policy with a synthetic sensitive record. Check the audit event and who can read it.",
+      "Exercise an outage and a deletion request. Record what fails closed and what remains in storage."
+    ],
+    "price": "Request separate estimates for inspections, log storage, governance seats and implementation. Estimate the cost of retaining evidence for your required audit period.",
+    "faq": "Does buying a guardrail make an AI deployment compliant?",
+    "answer": "A guardrail covers a specific interaction. Your team still needs to establish lawful access, retention, review ownership and evidence for its applicable requirements.",
+    "case": "Cisco publishes an AI Defense reference architecture for its AI PODs. Use the architecture to compare inspection points with your own model deployment.",
+    "source": "https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/AI_defense_on_Cisco_AI_PODs_reference_architecture.html"
+  },
+  {
+    "host": "theaiconsultingfirms.com",
+    "name": "AI Consulting Firms",
+    "title": "AI consulting firms: build a defensible RFP shortlist",
+    "intro": "Shortlist ten AI consulting firms for an RFP. Compare bid evidence, named staff, contract scope and what each finalist must demonstrate.",
+    "color": "#733a26",
+    "audience": "Procurement teams",
+    "providers": "accent bcg cap deloitte ibm mck slalom brain low good",
+    "matching": {
+      "title": "Find a firm for your shortlist",
+      "needs": {
+        "Plan a company-wide AI program": [
+          "bcg",
+          "mck",
+          "accent"
+        ],
+        "Build a system and connect it to our data": [
+          "deloitte",
+          "ibm",
+          "slalom"
+        ],
+        "Automate a process or build a low-code workflow": [
+          "cap",
+          "brain",
+          "low",
+          "good"
+        ]
+      }
+    },
+    "criteria": "Evaluate each firm as a bidder. Give finalists the same scenario and request documentary evidence for staffing, commercial scope and acceptance. Record an unanswered condition separately from a scored answer.",
+    "checklist": [
+      "Ask for named delivery leads, their allocation and any subcontracted work.",
+      "Request a reference in a similar operating environment. Ask the client what happened after go-live.",
+      "Require a sample statement of work with acceptance criteria, data handling and exit rights."
+    ],
+    "price": "Ask for role-level rates, a milestone estimate and change-order terms. Normalize proposals to the same team size and time horizon before scoring cost.",
+    "faq": "How many consulting firms should reach the final round?",
+    "answer": "Choose a group small enough to review thoroughly. Three comparable proposals can expose differences in staffing, commercial terms and support obligations.",
+    "case": "Accenture’s Texas DIR AI services page identifies contract DIR-CPO-5153 and directs eligible customers to the service agreement in Appendix D. Use this as an example of a procurement artifact: compare the advertised service categories with the deliverables, assumptions and acceptance conditions in the actual statement of work.",
+    "source": "https://www.accenture.com/en-us/support/state-texas-accenture-dir-artificial-intelligence",
+    "review_questions": {
+      "accent": "Request the proposed statement of work and ask the bidder to map each mandatory requirement to its contract clause.",
+      "bcg": "Ask which executive sponsor and delivery lead would answer an escalation. Score the named team attending the bid review.",
+      "cap": "Request a reference for a program spanning multiple business units and ask what the client had to supply during rollout.",
+      "deloitte": "Give the bid team a sample data-quality exception. Score the proposed ownership and cost of remediation.",
+      "ibm": "Request the responsibilities of the consulting team and software partners separately, including the support boundary.",
+      "mck": "Have the bid team show how an operations owner can challenge a model recommendation and record the ruling.",
+      "slalom": "Ask for the rollout lead to attend the reference interview. Compare promised training with what the named client received.",
+      "brain": "Require a responsibility table for the agency and its ERP partner. Ask who handles incidents spanning both systems.",
+      "low": "For a low-code bid, request export rights, platform fees and access rules in the same commercial response.",
+      "good": "Which past project matches our scope, and who owned delivery and handover?"
+    }
+  },
+  {
+    "host": "theaiconsultingcompanies.com",
+    "name": "AI Consulting Companies",
+    "title": "AI implementation partners: who runs the system after launch?",
+    "intro": "Choose an AI implementation partner by testing release ownership, operator training, recovery and handover before signing the final milestone.",
+    "color": "#304e62",
+    "audience": "Product and engineering leads",
+    "providers": "slalom ibm deloitte low good brain cap mck bcg accent",
+    "matching": {
+      "title": "Find a delivery team for your project",
+      "needs": {
+        "Integrate AI with existing software and data": [
+          "slalom",
+          "ibm",
+          "deloitte"
+        ],
+        "Build an operational workflow": [
+          "low",
+          "good",
+          "brain",
+          "cap"
+        ],
+        "Design how teams will use AI across the business": [
+          "mck",
+          "bcg",
+          "accent"
+        ]
+      }
+    },
+    "criteria": "Assess whether your own team can operate the delivered application. Ask every candidate to stage one buyer-led exercise using a company-owned account; document the access, instructions and fallback support it requires.",
+    "checklist": [
+      "If your engineers will take over, ask for a sample repository, runbook and handover schedule.",
+      "If the provider will operate the system, agree on incident coverage, escalation and the cost of changes.",
+      "Identify who owns evaluation data, infrastructure accounts and deployment access from day one."
+    ],
+    "price": "Compare build-and-handover with managed operation over twelve months. Include your own engineers’ time, vendor support and migration costs.",
+    "faq": "Who should own the code and infrastructure accounts?",
+    "answer": "Write the arrangement into the contract. A team that expects to take over needs repository access, operating instructions and a tested way to deploy independently.",
+    "case": "Slalom’s Genie account describes communications, training and testing alongside a migration of 180 support agents. That provides a concrete reference for rollout and adoption. It leaves a separate question for your handover rehearsal: can one of your supervisors make a routing change, validate it and undo it using the written procedure?",
+    "source": "https://www.slalom.com/us/en/customer-stories/genie-contact-center-agent-efficiency",
+    "review_questions": {
+      "slalom": "Ask a contact-center supervisor to change one staging queue before the vendor leaves. Capture the evidence the supervisor used to check routing.",
+      "ibm": "Have an internal engineer trace a failing integration across the vendor and platform support boundaries using a single request ID.",
+      "deloitte": "Ask your engineer to reproduce a dataset build, inspect a failed check and identify which schema version was deployed.",
+      "low": "Try exporting a small application change and restoring it in a clean workspace owned by your company.",
+      "good": "Ask an operations employee to change an automation after training and explain how to roll it back without waiting for a vendor call.",
+      "brain": "Have your operator recover a supplier request that reached the ERP but did not reach the recipient. Time the exercise.",
+      "cap": "Ask an internal process lead to submit, test and retire one automation under the proposed governance model.",
+      "mck": "Give the buyer’s model owner a drift alert and ask them to identify who can suspend the affected decision.",
+      "bcg": "Request a transition plan with a named business owner, successor and rehearsal date for each operating role.",
+      "accent": "Which past project matches our scope, and who owned delivery and handover?"
+    }
+  },
+  {
+    "host": "topaiautomationagencies.com",
+    "name": "AI Automation Agencies",
+    "title": "Workflow automation agencies: compare the cost per completed job",
+    "intro": "Evaluate automation agencies using exception rates, retry behavior, support terms and the cost of completing a real business workflow.",
+    "color": "#734222",
+    "audience": "Operators and founders",
+    "providers": "brain good low cap ibm slalom deloitte accent bcg mck",
+    "matching": {
+      "title": "Find an agency for your workflow",
+      "needs": {
+        "Automate a manual workflow": [
+          "brain",
+          "good",
+          "low",
+          "cap"
+        ],
+        "Connect automation to our systems and data": [
+          "ibm",
+          "slalom",
+          "deloitte"
+        ],
+        "Roll out automation across business units": [
+          "accent",
+          "bcg",
+          "mck"
+        ]
+      }
+    },
+    "criteria": "Compare agency proposals on one unit of work, such as a dispatched case or an approved order. Count failed attempts, manual review and maintenance when testing the agency’s saving estimate.",
+    "checklist": [
+      "Bring five anonymized examples, including a duplicate and an incomplete request.",
+      "Ask to see the audit trail for one completed run and one failed run.",
+      "Before handover, have your operator replay a failed job and confirm that it creates only one downstream record."
+    ],
+    "price": "Compare the setup fee, support retainer and per-run costs at your normal and peak volumes. Ask whether connector changes and failed-job investigation are included.",
+    "faq": "Which process should we automate first?",
+    "answer": "Pick a repeated task with clear inputs, a measurable completion event and an operator who can review exceptions. A reversible workflow gives you room to tune the system.",
+    "case": "Goodspeed describes a six-week n8n program at Oyster in which employees learned to build workflows from their own jobs. The agency labels the annual dollar impact as projected. Ask a bidder to show the original time sample, the number of completed runs and the maintenance hours behind a similar forecast.",
+    "source": "https://goodspeed.studio/casestudy/oyster",
+    "review_questions": {
+      "brain": "Test two suppliers replying to one dispatch request. Count how many assignments and customer notifications the workflow creates.",
+      "good": "If the quote includes training, ask staff to modify a live-style staging workflow and price their time in the savings calculation.",
+      "low": "Request the cost of adding one approval rule after launch. Include platform usage and any minimum support commitment.",
+      "cap": "Ask for the cost of monitoring a backlog across two departments when only one of them supplies clean inputs.",
+      "ibm": "Simulate a downstream outage in the trial and ask who pays for repeated integration calls while the dependency is unavailable.",
+      "slalom": "Request the volume and staffing assumptions behind a contact-routing automation. Count escalations that return to a human queue.",
+      "deloitte": "Have the agency include data cleanup in the estimate when comparing manual and automated processing time.",
+      "accent": "Compare the scope of the initial deployment with ongoing paid support. Ask for one example of a change billed separately.",
+      "bcg": "For a multi-team rollout, calculate the monthly benefit for one workflow before adding the expected savings from other units.",
+      "mck": "Which past project matches our scope, and who owned delivery and handover?"
+    }
+  }
 ]

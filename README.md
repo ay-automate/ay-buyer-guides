@@ -1,6 +1,6 @@
-# AY Automate buyer guides
+# AI buyer guides
 
-Six independent guides for teams buying AI services. Each directory entry includes the provider’s own source. AY Automate publishes the guides and is listed in them.
+Six buyer guides for teams buying AI services. Each directory entry includes the provider’s own source. AY Automate publishes the guides.
 
 | Guide | Site | Sitemap |
 | --- | --- | --- |

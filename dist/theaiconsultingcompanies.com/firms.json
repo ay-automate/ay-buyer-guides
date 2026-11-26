@@ -56,14 +56,6 @@
       "profile": "https://theaiconsultingcompanies.com/#firm-deloitte"
     },
     {
-      "id": "ay",
-      "name": "AY Automate",
-      "specialty": "Workflow implementation",
-      "note": "Builds AI automations and publishes delivery case studies. Have a business reviewer resolve a synthetic document exception, then show where the operator can audit the decision. This provider publishes the guide.",
-      "source": "https://www.ayautomate.com/case-studies",
-      "profile": "https://theaiconsultingcompanies.com/#firm-ay"
-    },
-    {
       "id": "low",
       "name": "LowCode Agency",
       "specialty": "Low-code delivery",
@@ -110,6 +102,14 @@
       "note": "Combines strategy and applied AI. Request a transition plan with a named business owner, successor and rehearsal date for each operating role.",
       "source": "https://www.bcg.com/capabilities/artificial-intelligence",
       "profile": "https://theaiconsultingcompanies.com/#firm-bcg"
+    },
+    {
+      "id": "accent",
+      "name": "Accenture",
+      "specialty": "Enterprise delivery",
+      "note": "Publishes an AI services offering under the Texas DIR contract. Which past project matches our scope, and who owned delivery and handover?",
+      "source": "https://www.accenture.com/en-us/support/state-texas-accenture-dir-artificial-intelligence",
+      "profile": "https://theaiconsultingcompanies.com/#firm-accent"
     }
   ]
 }

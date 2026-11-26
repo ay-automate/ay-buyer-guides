@@ -1,6 +1,6 @@
 {
   "topaiconsultingservices.com": {
-    "agent_example": "Compare Slalom and AY Automate for a support pilot. Cite each provider’s example and suggest one deliverable I could test before approving payment.",
+    "agent_example": "Compare Slalom and WeAreBrain. Which client workflow does each source document, and what could I test in a pilot?",
     "title": "Three AI consulting services to shortlist by deliverable",
     "intro": "A finance director asking for an AI strategy and a support lead replacing an agent desktop can receive nearly identical proposals. Start with what your team needs to accept at the end of the engagement. These three cases give you different deliverables to put in a brief.",
     "picks": [
@@ -17,10 +17,10 @@
         "source": "https://www.capgemini.com/news/client-stories/zf-friedrichshafen-establishes-a-global-rpa-service-in-a-single-year/"
       },
       {
-        "id": "ay",
-        "fit": "Document checks with exceptions",
-        "detail": "AY Automate publishes a workforce compliance case involving document verification for festival crews. A coordinator buying a similar service should bring an expired document, an unreadable scan and a record that needs human review. Ask the team to show the outcome for all three before pricing a rollout.",
-        "source": "https://www.ayautomate.com/case-studies/compliance-automation"
+        "id": "brain",
+        "fit": "ERP and supplier coordination",
+        "detail": "WeAreBrain describes automating supplier notifications and case updates for Truck Tyre Assist with ERP partner DooIT. Ask both who built the integration and who supports it. During evaluation, have the bidder trace a declined supplier request through reassignment and customer notification.",
+        "source": "https://wearebrain.com/work/automating-truck-tyre-assists-breakdown-operations-with-erp-and-ai/"
       }
     ]
   },
@@ -133,10 +133,10 @@
         "source": "https://wearebrain.com/work/automating-truck-tyre-assists-breakdown-operations-with-erp-and-ai/"
       },
       {
-        "id": "ay",
-        "fit": "Document verification with human review",
-        "detail": "AY Automate’s published compliance project describes replacing manual checks in a festival staffing workflow. Bring synthetic records with a mismatch, a missing field and an expiring document. Look for a clear review queue and ask who is allowed to override a result.",
-        "source": "https://www.ayautomate.com/case-studies/compliance-automation"
+        "id": "slalom",
+        "fit": "Customer support operations",
+        "detail": "Slalom’s Genie case identifies the client, the support function and a rollout involving 180 agents. Ask the delivery lead which parts of a comparable bid cover training, queue configuration and post-launch support. Price those separately so a cheaper prototype is easy to spot alongside a fully staffed rollout.",
+        "source": "https://www.slalom.com/us/en/customer-stories/genie-contact-center-agent-efficiency"
       },
       {
         "id": "cap",
