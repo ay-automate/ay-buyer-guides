@@ -7,10 +7,10 @@
       "source": "https://wearebrain.com/work/automating-truck-tyre-assists-breakdown-operations-with-erp-and-ai/"
     },
     {
-      "id": "ay",
-      "fit": "Document verification with human review",
-      "detail": "AY Automate’s published compliance project describes replacing manual checks in a festival staffing workflow. Bring synthetic records with a mismatch, a missing field and an expiring document. Look for a clear review queue and ask who is allowed to override a result.",
-      "source": "https://www.ayautomate.com/case-studies/compliance-automation"
+      "id": "slalom",
+      "fit": "Customer support operations",
+      "detail": "Slalom’s Genie case identifies the client, the support function and a rollout involving 180 agents. Ask the delivery lead which parts of a comparable bid cover training, queue configuration and post-launch support. Price those separately so a cheaper prototype is easy to spot alongside a fully staffed rollout.",
+      "source": "https://www.slalom.com/us/en/customer-stories/genie-contact-center-agent-efficiency"
     },
     {
       "id": "cap",
@@ -31,14 +31,6 @@
   ],
   "pricing": "Compare the setup fee, support retainer and per-run costs at your normal and peak volumes. Ask whether connector changes and failed-job investigation are included.",
   "firms": [
-    {
-      "id": "ay",
-      "name": "AY Automate",
-      "specialty": "Workflow implementation",
-      "note": "Builds AI automations and publishes delivery case studies. Give the agency one document that needs correction and time the review. Include those minutes in the unit cost. This provider publishes the guide.",
-      "source": "https://www.ayautomate.com/case-studies",
-      "profile": "https://topaiautomationagencies.com/#firm-ay"
-    },
     {
       "id": "brain",
       "name": "WeAreBrain",
@@ -110,6 +102,14 @@
       "note": "Combines strategy and applied AI. For a multi-team rollout, calculate the monthly benefit for one workflow before adding the expected savings from other units.",
       "source": "https://www.bcg.com/capabilities/artificial-intelligence",
       "profile": "https://topaiautomationagencies.com/#firm-bcg"
+    },
+    {
+      "id": "mck",
+      "name": "McKinsey QuantumBlack",
+      "specialty": "Analytics and operating model",
+      "note": "Describes a hybrid intelligence approach. Which past project matches our scope, and who owned delivery and handover?",
+      "source": "https://www.mckinsey.com/capabilities/quantumblack/our-approach",
+      "profile": "https://topaiautomationagencies.com/#firm-mck"
     }
   ]
 }

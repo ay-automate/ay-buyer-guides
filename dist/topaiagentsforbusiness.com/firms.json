@@ -21,7 +21,7 @@
   ],
   "guide": "Business Agent Guide",
   "publisher": "AY Automate",
-  "methodology": "This list covers CRM, ERP, cloud and cross-app workflows. AY Automate appears as an implementation service for teams that want help building their workflow.",
+  "methodology": "Compare CRM, ERP, cloud and cross-app workflows by the systems each option supports. Evaluate implementation services separately from software platforms.",
   "editorial_policy": "https://topaiagentsforbusiness.com/#editorial",
   "commercial_relationship": "The publisher sells AI implementation services.",
   "questions": [
@@ -104,12 +104,12 @@
       "profile": "https://topaiagentsforbusiness.com/#firm-ui"
     },
     {
-      "id": "ay",
-      "name": "AY Automate",
-      "specialty": "Workflow implementation",
-      "note": "Builds AI automations and publishes delivery case studies. Ask who owns each integration after handover. This provider publishes the guide.",
-      "source": "https://www.ayautomate.com/case-studies",
-      "profile": "https://topaiagentsforbusiness.com/#firm-ay"
+      "id": "cap",
+      "name": "Capgemini",
+      "specialty": "Process automation",
+      "note": "Documents the rollout of a global robotic process automation service at ZF. Ask how the team handles process exceptions.",
+      "source": "https://www.capgemini.com/news/client-stories/zf-friedrichshafen-establishes-a-global-rpa-service-in-a-single-year/",
+      "profile": "https://topaiagentsforbusiness.com/#firm-cap"
     }
   ]
 }

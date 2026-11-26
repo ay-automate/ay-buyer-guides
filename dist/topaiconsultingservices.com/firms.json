@@ -13,10 +13,10 @@
       "source": "https://www.capgemini.com/news/client-stories/zf-friedrichshafen-establishes-a-global-rpa-service-in-a-single-year/"
     },
     {
-      "id": "ay",
-      "fit": "Document checks with exceptions",
-      "detail": "AY Automate publishes a workforce compliance case involving document verification for festival crews. A coordinator buying a similar service should bring an expired document, an unreadable scan and a record that needs human review. Ask the team to show the outcome for all three before pricing a rollout.",
-      "source": "https://www.ayautomate.com/case-studies/compliance-automation"
+      "id": "brain",
+      "fit": "ERP and supplier coordination",
+      "detail": "WeAreBrain describes automating supplier notifications and case updates for Truck Tyre Assist with ERP partner DooIT. Ask both who built the integration and who supports it. During evaluation, have the bidder trace a declined supplier request through reassignment and customer notification.",
+      "source": "https://wearebrain.com/work/automating-truck-tyre-assists-breakdown-operations-with-erp-and-ai/"
     }
   ],
   "guide": "AI Consulting Services",
@@ -31,14 +31,6 @@
   ],
   "pricing": "Request separate prices for discovery, implementation and ongoing support. Compare the cost of the first accepted workflow and the monthly cost to keep it running.",
   "firms": [
-    {
-      "id": "ay",
-      "name": "AY Automate",
-      "specialty": "Workflow implementation",
-      "note": "Builds AI automations and publishes delivery case studies. Ask for a pilot that takes one document from intake to a human-approved exception. Specify who labels the acceptance examples. This provider publishes the guide.",
-      "source": "https://www.ayautomate.com/case-studies",
-      "profile": "https://topaiconsultingservices.com/#firm-ay"
-    },
     {
       "id": "bcg",
       "name": "BCG",
@@ -110,6 +102,14 @@
       "note": "Describes n8n workflows and AI agents for operations teams. Ask for a working automation and a handover exercise. Price employee time spent learning the workflow as a buyer contribution.",
       "source": "https://goodspeed.studio/n8n-agency",
       "profile": "https://topaiconsultingservices.com/#firm-good"
+    },
+    {
+      "id": "low",
+      "name": "LowCode Agency",
+      "specialty": "Low-code delivery",
+      "note": "Publishes a guide to AI agents that run business processes. Which past project matches our scope, and who owned delivery and handover?",
+      "source": "https://www.lowcode.agency/blog/ai-workflow-automation",
+      "profile": "https://topaiconsultingservices.com/#firm-low"
     }
   ]
 }

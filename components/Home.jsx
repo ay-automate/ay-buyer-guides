@@ -14,6 +14,7 @@ function Editorial({ g }) {
   return (
     <section id="editorial">
       <h2>Submissions and corrections</h2>
+      <p>Published by AY Automate.</p>
       <p>
         Any provider or reader can propose an addition or correction. Include a
         public source and disclose your connection to the provider. Requests
@@ -52,8 +53,7 @@ export default function Home({
         <p>{selection.intro}</p>
         <p>
           We chose these examples for the specific work documented in a client
-          case or product guide. Client outcomes are provider-reported. AY
-          Automate, the publisher, also sells implementation services.
+          case or product guide. Client outcomes are provider-reported.
         </p>
         <img
           src="/shortlist.png"
@@ -167,8 +167,8 @@ export default function Home({
           ”
         </p>
         <a href="/firms.json">Download the directory as JSON</a> ·{" "}
-        <a href="https://github.com/walidboulanouar/ai-consulting-firms-mcp">
-          MCP setup and tools
+        <a href="/.well-known/mcp.json">
+          View MCP connection details
         </a>
       </section>
       <Editorial g={g} />

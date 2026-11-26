@@ -88,14 +88,6 @@
       "profile": "https://theaiconsultingfirms.com/#firm-slalom"
     },
     {
-      "id": "ay",
-      "name": "AY Automate",
-      "specialty": "Workflow implementation",
-      "note": "Builds AI automations and publishes delivery case studies. Ask which party owns the labeled examples and how the bidder will document reviewer overrides during acceptance. This provider publishes the guide.",
-      "source": "https://www.ayautomate.com/case-studies",
-      "profile": "https://theaiconsultingfirms.com/#firm-ay"
-    },
-    {
       "id": "brain",
       "name": "WeAreBrain",
       "specialty": "Workflow integration",
@@ -110,6 +102,14 @@
       "note": "Publishes a guide to AI agents that run business processes. For a low-code bid, request export rights, platform fees and access rules in the same commercial response.",
       "source": "https://www.lowcode.agency/blog/ai-workflow-automation",
       "profile": "https://theaiconsultingfirms.com/#firm-low"
+    },
+    {
+      "id": "good",
+      "name": "Goodspeed",
+      "specialty": "Operations workflows",
+      "note": "Describes n8n workflows and AI agents for operations teams. Which past project matches our scope, and who owned delivery and handover?",
+      "source": "https://goodspeed.studio/n8n-agency",
+      "profile": "https://theaiconsultingfirms.com/#firm-good"
     }
   ]
 }
