@@ -246,6 +246,18 @@
       [
         "Decide what happens during a failure",
         "Ask the agency to separate response time from recovery time. For a delayed order, identify who pauses retries, who checks for a duplicate and who tells the customer that processing resumed. Include the cost of out-of-hours support only when the workflow actually needs it."
+      ],
+      [
+        "Count each accepted order once",
+        "Suppose 1,000 distinct orders arrive in a month. The destination accepts 900 on the first attempt. Retrying the other 100 gets 60 more accepted. Staff review the remaining 40 and correct 30 by hand. At month end, 990 orders meet the acceptance rule, including 30 manual completions. The other 10 are still open. Match each accepted destination record to its source order ID so a duplicate write cannot earn a second completion."
+      ],
+      [
+        "Calculate cost per completed workflow",
+        "Using the $1,050 retainer above, suppose the tool charges $0.10 per attempt on top of the retainer. The 1,000 first attempts and 100 retries cost $110. Six minutes of staff time on each of the 40 exceptions comes to four hours. At $45 per hour, that adds $180, including time spent on the 10 open orders. The monthly total is $1,340. Divide by 990 accepted orders for $1.35 per completion. Of those orders, 960 finished without manual correction."
+      ],
+      [
+        "Check the calculation against your pilot",
+        "Use the same batch and cutoff for both bids. Match the execution log to the destination records, check metered charges against the invoice, and use the time spent on all exceptions. Include support and the same share of one-time setup for each bid, counting fees already bundled in the quote only once. If the batch yields zero accepted orders, report the spend and zero completions. A unit cost cannot yet be calculated."
       ]
     ],
     "columns": [
