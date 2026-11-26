@@ -21,7 +21,7 @@ function Editorial({ g }) {
         open on GitHub and are public.
       </p>
       <p>
-        <a href={link("Provider submission")}>Submit a provider</a> ·{" "}
+        <a href={link("Provider submission")}>{g.shortName === "TAA" ? "Submit an agency" : "Submit a provider"}</a> ·{" "}
         <a href={link("Editorial correction")}>Request a correction</a> ·{" "}
         <a href={tracker + "?q=is%3Aissue"}>View editorial requests</a>
       </p>
@@ -46,7 +46,7 @@ export default function Home({
         label={field.label + " / 2026 buyer guide"}
         title={g.title}
         intro={g.intro}
-        action={["#match", "Find a provider by need"]}
+        action={[g.actionTarget, g.actionLabel]}
       />
       <section id="shortlist">
         <h2>{selection.title}</h2>

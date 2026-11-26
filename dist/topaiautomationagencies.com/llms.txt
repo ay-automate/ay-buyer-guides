@@ -1,11 +1,11 @@
-# AI Automation Agencies
+# Top Automation Agencies
 
 > Evaluate automation agencies using exception rates, retry behavior, support terms and the cost of completing a real business workflow.
 
 Published by AY Automate, a seller of AI implementation services. [Editorial policy and corrections](https://topaiautomationagencies.com/#editorial).
 
 ## Guide
-- [Workflow automation agencies: compare the cost per completed job](https://topaiautomationagencies.com/)
+- [Compare AI automation agencies](https://topaiautomationagencies.com/)
 - [Estimate the cost of automating one workflow](https://topaiautomationagencies.com/worksheet/)
 - [Automation agency pricing: fixed fee or retainer?](https://topaiautomationagencies.com/automation-agency-pricing/)
 

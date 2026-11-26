@@ -1,4 +1,4 @@
-# AI Consulting Firms
+# The AI Consulting Firms Directory
 
 > Shortlist ten AI consulting firms for an RFP. Compare bid evidence, named staff, contract scope and what each finalist must demonstrate.
 
