@@ -66,4 +66,4 @@ code{overflow-wrap:anywhere}
 .prompt{font-weight:700;margin:15px 0 4px}
 .write-in{border:1px solid #879184;border-radius:4px;background:white;min-height:72px;padding:10px;white-space:pre-wrap;overflow-wrap:anywhere}
 .write-in:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
-@media print{.write-in{break-inside:avoid}}
+@media print{.prompt{break-after:avoid}.write-in{break-inside:avoid}}
