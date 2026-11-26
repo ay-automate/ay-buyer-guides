@@ -13,19 +13,7 @@ function Editorial({ g }) {
     });
   return (
     <section id="editorial">
-      <h2>About {g.name}</h2>
-      <p>
-        AY Automate publishes this guide and sells AI implementation services.
-        Where AY Automate appears in a comparison, readers are evaluating the
-        publisher alongside other providers.
-      </p>
-      <h3>How to read the evidence</h3>
-      <p>
-        {g.criteria} Follow each source to see who made the claim. Ask for a
-        client reference, a dated scope and a written price before choosing a
-        provider.
-      </p>
-      <h3>Submissions and corrections</h3>
+      <h2>Submissions and corrections</h2>
       <p>
         Any provider or reader can propose an addition or correction. Include a
         public source and disclose your connection to the provider. Requests
@@ -65,8 +53,7 @@ export default function Home({
         <p>
           We chose these examples for the specific work documented in a client
           case or product guide. Client outcomes are provider-reported. AY
-          Automate, the publisher, also sells implementation services.{" "}
-          <a href="#editorial">About this guide</a>.
+          Automate, the publisher, also sells implementation services.
         </p>
         <img
           src="/shortlist.png"

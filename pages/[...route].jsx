@@ -127,7 +127,7 @@ export default function Guide(props) {
       <footer>
         <a href="/">{g.name}</a> ·{" "}
         <a href="/#editorial">
-          About the publisher, submissions and corrections
+          Submissions and corrections
         </a>
       </footer>
     </>
