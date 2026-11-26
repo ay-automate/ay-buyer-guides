@@ -235,7 +235,7 @@
     "price": "Compare build-and-handover with managed operation over twelve months. Include your own engineers’ time, vendor support and migration costs.",
     "faq": "Who should own the code and infrastructure accounts?",
     "answer": "Write the arrangement into the contract. A team that expects to take over needs repository access, operating instructions and a tested way to deploy independently.",
-    "case": "Slalom’s Genie account describes communications, training and testing alongside a migration of 180 support agents. That provides a concrete reference for rollout and adoption. It leaves a separate question for your handover rehearsal: can one of your supervisors make a routing change, validate it and undo it using the written procedure?",
+    "case": "Slalom’s Genie account describes communications, training and testing alongside a migration of 180 agents and supervisors. That provides a concrete reference for rollout and adoption. It leaves a separate question for your handover rehearsal: can one of your supervisors make a routing change, validate it and undo it using the written procedure?",
     "source": "https://www.slalom.com/us/en/customer-stories/genie-contact-center-agent-efficiency",
     "review_questions": {
       "slalom": "Ask a contact-center supervisor to change one staging queue before the vendor leaves. Capture the evidence the supervisor used to check routing.",
