@@ -31,6 +31,7 @@ export function getStaticProps({ params }) {
 }
 export default function Guide(props) {
   const { g, slug, base, data, article, sheet, style } = props;
+  const iconVersion = g.shortName === "TAA" ? "?v=taa" : "";
   const page = slug === "worksheet" ? sheet : article,
     title = slug ? page.title : g.title + " | 2026 buyer guide",
     desc = slug ? page.summary : g.intro,
@@ -74,9 +75,9 @@ export default function Guide(props) {
         <title>{title}</title>
         <meta name="description" content={desc} />
         <link rel="canonical" href={url} />
-        <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
-        <link rel="icon" href="/favicon.png" sizes="192x192" type="image/png" />
-        <link rel="apple-touch-icon" href="/favicon.png" />
+        <link rel="icon" href={"/favicon.ico" + iconVersion} sizes="16x16 32x32 48x48" />
+        <link rel="icon" href={"/favicon.png" + iconVersion} sizes="192x192" type="image/png" />
+        <link rel="apple-touch-icon" href={"/favicon.png" + iconVersion} />
         {Object.entries({
           title,
           description: desc,
@@ -107,7 +108,7 @@ export default function Guide(props) {
       </a>
       <header>
         <a className="brand" href="/">
-          <img src="/favicon.png" alt="" width="35" height="35" />
+          <img src={"/favicon.png" + iconVersion} alt="" width="35" height="35" />
           {g.name}
         </a>
         <nav aria-label="Primary">
