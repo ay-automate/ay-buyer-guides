@@ -199,10 +199,11 @@ def render(guide, catalog, target, guides, sheet):
                       source=catalog[k][3], profile=base + "#firm-" + k) for k in keys]
     }
     (public / "firms.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
+    example = selection.get("agent_example", "Which provider fits my project, and what evidence supports that choice?")
     agent_access = ('<section id="agent-access"><h2>Compare these providers in your AI assistant</h2>'
                     '<p>Add a remote MCP server using Streamable HTTP. Paste the URL below into your client. No API key is required.</p>'
                     f'<p><code>{base}mcp</code></p>'
-                    '<p>Try “Which provider fits my project, and what evidence supports that choice?”</p>'
+                    f'<p>Try “{escape(example)}”</p>'
                     '<a href="/firms.json">Download the directory as JSON</a> · '
                     '<a href="https://github.com/walidboulanouar/ai-consulting-firms-mcp">MCP setup and tools</a></section>')
     sources.append(f"- [Remote MCP]({base}mcp): search_firms, compare_firms and recommend_providers.")
