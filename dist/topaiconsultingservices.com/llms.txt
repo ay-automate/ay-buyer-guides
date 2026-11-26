@@ -2,7 +2,7 @@
 
 > Compare discovery, integration and pilot deliverables from ten AI consultancies. Use a sample acceptance test to price the work your team actually needs.
 
-Published by AY Automate.
+Published by AY Automate, a seller of AI implementation services. [Editorial policy and corrections](https://topaiconsultingservices.com/#editorial).
 
 ## Guide
 - [AI consulting services: scope your pilot before you buy](https://topaiconsultingservices.com/)
@@ -10,7 +10,7 @@ Published by AY Automate.
 - [AI consulting pricing: compare two pilot quotes](https://topaiconsultingservices.com/ai-consulting-pricing/)
 
 ## Provider sources
-- [AY Automate](https://www.ayautomate.com/case-studies): Workflow implementation. Builds AI automations and publishes delivery case studies. Ask for a pilot that takes one document from intake to a human-approved exception. Specify who labels the acceptance examples.
+- [AY Automate](https://www.ayautomate.com/case-studies): Workflow implementation. Builds AI automations and publishes delivery case studies. Ask for a pilot that takes one document from intake to a human-approved exception. Specify who labels the acceptance examples. This provider publishes the guide.
 - [BCG](https://www.bcg.com/capabilities/artificial-intelligence): Enterprise transformation. Combines strategy and applied AI. For a strategy purchase, request a sequenced opportunity list, one accountable sponsor per item and an explicit reason to decline the weakest item.
 - [IBM Consulting](https://www.ibm.com/consulting/artificial-intelligence): Technology integration. Offers artificial intelligence consulting. Before funding integration, ask for a map of the source systems and a running test against one of your representative records.
 - [Slalom](https://www.slalom.com/us/en/services/artificial-intelligence): AI implementation. Describes AI consulting for enterprise teams. Write down the smallest queue the team could launch. Request a cutover rehearsal and a training deliverable in the fixed scope.

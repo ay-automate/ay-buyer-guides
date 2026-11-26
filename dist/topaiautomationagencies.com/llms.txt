@@ -2,7 +2,7 @@
 
 > Evaluate automation agencies using exception rates, retry behavior, support terms and the cost of completing a real business workflow.
 
-Published by AY Automate.
+Published by AY Automate, a seller of AI implementation services. [Editorial policy and corrections](https://topaiautomationagencies.com/#editorial).
 
 ## Guide
 - [Workflow automation agencies: compare the cost per completed job](https://topaiautomationagencies.com/)
@@ -10,7 +10,7 @@ Published by AY Automate.
 - [Automation agency pricing: fixed fee or retainer?](https://topaiautomationagencies.com/automation-agency-pricing/)
 
 ## Provider sources
-- [AY Automate](https://www.ayautomate.com/case-studies): Workflow implementation. Builds AI automations and publishes delivery case studies. Give the agency one document that needs correction and time the review. Include those minutes in the unit cost.
+- [AY Automate](https://www.ayautomate.com/case-studies): Workflow implementation. Builds AI automations and publishes delivery case studies. Give the agency one document that needs correction and time the review. Include those minutes in the unit cost. This provider publishes the guide.
 - [WeAreBrain](https://wearebrain.com/ai-automation-agency/): Workflow integration. Offers workflow automation and integration. Test two suppliers replying to one dispatch request. Count how many assignments and customer notifications the workflow creates.
 - [Goodspeed](https://goodspeed.studio/n8n-agency): Operations workflows. Describes n8n workflows and AI agents for operations teams. If the quote includes training, ask staff to modify a live-style staging workflow and price their time in the savings calculation.
 - [LowCode Agency](https://www.lowcode.agency/blog/ai-workflow-automation): Low-code delivery. Publishes a guide to AI agents that run business processes. Request the cost of adding one approval rule after launch. Include platform usage and any minimum support commitment.

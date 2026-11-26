@@ -2,7 +2,7 @@
 
 > Choose an AI implementation partner by testing release ownership, operator training, recovery and handover before signing the final milestone.
 
-Published by AY Automate.
+Published by AY Automate, a seller of AI implementation services. [Editorial policy and corrections](https://theaiconsultingcompanies.com/#editorial).
 
 ## Guide
 - [AI implementation partners: who runs the system after launch?](https://theaiconsultingcompanies.com/)
@@ -13,7 +13,7 @@ Published by AY Automate.
 - [Slalom](https://www.slalom.com/us/en/services/artificial-intelligence): AI implementation. Describes AI consulting for enterprise teams. Ask a contact-center supervisor to change one staging queue before the vendor leaves. Capture the evidence the supervisor used to check routing.
 - [IBM Consulting](https://www.ibm.com/consulting/artificial-intelligence): Technology integration. Offers artificial intelligence consulting. Have an internal engineer trace a failing integration across the vendor and platform support boundaries using a single request ID.
 - [Deloitte](https://www.deloitte.com/global/en/services/consulting/services/engineering-ai-data.html): Engineering and data. Groups engineering, AI and data delivery in one practice. Ask your engineer to reproduce a dataset build, inspect a failed check and identify which schema version was deployed.
-- [AY Automate](https://www.ayautomate.com/case-studies): Workflow implementation. Builds AI automations and publishes delivery case studies. Have a business reviewer resolve a synthetic document exception, then show where the operator can audit the decision.
+- [AY Automate](https://www.ayautomate.com/case-studies): Workflow implementation. Builds AI automations and publishes delivery case studies. Have a business reviewer resolve a synthetic document exception, then show where the operator can audit the decision. This provider publishes the guide.
 - [LowCode Agency](https://www.lowcode.agency/blog/ai-workflow-automation): Low-code delivery. Publishes a guide to AI agents that run business processes. Try exporting a small application change and restoring it in a clean workspace owned by your company.
 - [Goodspeed](https://goodspeed.studio/n8n-agency): Operations workflows. Describes n8n workflows and AI agents for operations teams. Ask an operations employee to change an automation after training and explain how to roll it back without waiting for a vendor call.
 - [WeAreBrain](https://wearebrain.com/ai-automation-agency/): Workflow integration. Offers workflow automation and integration. Have your operator recover a supplier request that reached the ERP but did not reach the recipient. Time the exercise.

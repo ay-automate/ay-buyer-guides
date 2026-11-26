@@ -1,3 +1,4 @@
+from urllib.parse import urlencode
 """Render the six read-only buyer guides using only Python's standard library."""
 import base64
 import csv
@@ -57,10 +58,28 @@ def reading_layout(toc, body):
             f'<nav aria-label="On this page">{links}</nav></aside><article>{body}</article></div>')
 
 
+def editorial_section(guide):
+    tracker = "https://github.com/ay-automate/ay-buyer-guides/issues"
+    links = []
+    for label, request in (("Submit a provider", "Provider submission"), ("Request a correction", "Editorial correction")):
+        query = urlencode({"title": f"{request} for {guide['name']}", "body":
+            f"Guide: {guide['host']}\nProvider or page URL:\nProposed addition or change:\nPublic source supporting it:\nYour connection to the provider:"})
+        links.append(f'<a href="{tracker}/new?{escape(query)}">{label}</a>')
+    return (f'<section id="editorial"><h2>About {escape(guide["name"])}</h2>'
+            '<p>AY Automate publishes this guide and sells AI implementation services. '
+            'Where AY Automate appears in a comparison, readers are evaluating the publisher alongside other providers.</p>'
+            '<h3>How to read the evidence</h3>'
+            f'<p>{escape(guide["criteria"])} '
+            'Follow each source to see who made the claim. Ask for a client reference, a dated scope and a written price before choosing a provider.</p>'
+            '<h3>Submissions and corrections</h3><p>Any provider or reader can propose an addition or correction. '
+            'Include a public source and disclose your connection to the provider. Requests open on GitHub and are public.</p><p>'
+            + ' · '.join(links) + f' · <a href="{tracker}?q=is%3Aissue">View editorial requests</a></p></section>')
+
+
 def wrap_page(guide, head, content):
     return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">{head}<style>:root{{--ink:{guide['color']}}}{STYLE}</style></head><body>
 <a class="skip" href="#main">Skip to content</a>{masthead(guide)}<main id="main">{content}</main>
-<footer>Published by <a href="https://www.ayautomate.com/about">AY Automate</a>. <a href="/">Guide home</a> · <a href="https://www.ayautomate.com/contact">Send an editorial correction</a></footer></body></html>"""
+<footer><a href="/">{escape(guide["name"])}</a> · <a href="/#editorial">About the publisher, submissions and corrections</a></footer></body></html>"""
 
 
 def worksheet_page(guide, sheet, base):
@@ -157,6 +176,9 @@ def render(guide, catalog, target, guides, sheet):
             note = note.partition(". ")[0].rstrip(".") + ". " + questions[key]
         descriptions[key] = note
         name, group, note, link = map(escape, (name, group, note, url))
+        if key == "ay":
+            note += ' This provider publishes the guide.'
+            descriptions[key] += ' This provider publishes the guide.'
         cards.append(f'<article class="entry" id="firm-{escape(key)}"><p class="tag">{group}</p><h3>{name}</h3><p>{note}</p><a href="{link}">Source from {name}</a></article>')
         sources.append(f'- [{name}]({url}): {group}. {note}')
     steps = ''.join(f'<li>{escape(item)}</li>' for item in guide['checklist'])
@@ -194,6 +216,7 @@ def render(guide, catalog, target, guides, sheet):
     selection = json.loads((HERE / "picks.json").read_text())[guide["host"]]
     data = {
         "picks": selection["picks"], "guide": guide["name"], "publisher": "AY Automate", "methodology": guide["criteria"],
+        "editorial_policy": base + "#editorial", "commercial_relationship": "The publisher sells AI implementation services.",
         "questions": guide["checklist"], "pricing": guide["price"],
         "firms": [dict(id=k, name=catalog[k][0], specialty=catalog[k][1], note=descriptions[k],
                       source=catalog[k][3], profile=base + "#firm-" + k) for k in keys]
@@ -213,7 +236,7 @@ def render(guide, catalog, target, guides, sheet):
         name = escape(catalog[item['id']][0])
         picks.append(f'<li><h3>{name} · {escape(item["fit"])}</h3><p>{escape(item["detail"])}</p><a href="{escape(item["source"])}">Read the source from {name}</a></li>')
     shortlist = (f'<section id="shortlist"><h2>{escape(selection["title"])}</h2><p>{escape(selection["intro"])}</p>'
-                 '<p>We chose these examples for the specific work documented in a client case or product guide. Client outcomes are provider-reported. AY Automate publishes this guide.</p>'
+                 '<p>We chose these examples for the specific work documented in a client case or product guide. Client outcomes are provider-reported. AY Automate, the publisher, also sells implementation services. <a href="#editorial">About this guide</a>.</p>'
                  '<img src="/shortlist.png" width="1056" height="370" style="max-width:100%;height:auto" alt="Project needs and their shortlisted providers, detailed below" loading="lazy">'
                  + '<ol>' + ''.join(picks) + '</ol></section>')
     field = FIELDWORK[guide['host']]
@@ -224,10 +247,10 @@ def render(guide, catalog, target, guides, sheet):
 <section><h2>Buyer resources</h2><div class="resources"><a class="resource" href="/worksheet/"><span class="card-label">Working document</span><h3>{escape(sheet["title"])}</h3><p>{escape(sheet["summary"])}</p></a>
 <a class="resource" href="{article_path}"><span class="card-label">Decision guide</span><h3>{escape(article["title"])}</h3><p>{escape(article["summary"])}</p></a></div></section>
 {provider_matches(guide, catalog)}
-<section id="directory"><h2>Directory</h2><p class="method">{g['criteria']}</p><p class="footnote">Published by AY Automate, which sells AI implementation services. Entries link to provider materials. The guide gives no numerical ratings.</p><div class="grid">{''.join(cards)}</div></section>
+<section id="directory"><h2>Directory</h2><p class="method">{g['criteria']}</p><p class="footnote">Entries link to provider materials. The guide gives no numerical ratings.</p><div class="grid">{''.join(cards)}</div></section>
 <section id="pricing"><h2>How to compare prices</h2><p>{g['price']}</p></section>
 <section><h2>A worked example to review</h2><p>{g['case']}</p><a href="{g['source']}">Read the provider’s example</a></section>
-<section id="faq"><h2>{g['faq']}</h2><p>{g['answer']}</p></section>{agent_access}<section><h2>Related buyer guides</h2><ul>{related}</ul></section>"""
+<section id="faq"><h2>{g['faq']}</h2><p>{g['answer']}</p></section>{agent_access}{editorial_section(guide)}<section><h2>Related buyer guides</h2><ul>{related}</ul></section>"""
     html = wrap_page(guide, head, body)
     (public / 'index.html').write_text(html)
     (public / 'robots.txt').write_text(f'User-agent: *\nAllow: /\nSitemap: {base}sitemap.xml\n')
@@ -239,7 +262,7 @@ def render(guide, catalog, target, guides, sheet):
             raise ValueError(f'Canonical does not match sitemap URL {location}')
         ET.SubElement(ET.SubElement(sitemap, 'url'), 'loc').text = location
     ET.ElementTree(sitemap).write(public / 'sitemap.xml', encoding='utf-8', xml_declaration=True)
-    (public / 'llms.txt').write_text(f"# {guide['name']}\n\n> {guide['intro']}\n\nPublished by AY Automate.\n\n## Guide\n- [{guide['title']}]({base})\n- [{sheet['title']}]({base}worksheet/)\n- [{article['title']}]({base}{article['slug']}/)\n\n## Provider sources\n" + '\n'.join(sources) + '\n')
+    (public / 'llms.txt').write_text(f"# {guide['name']}\n\n> {guide['intro']}\n\nPublished by AY Automate, a seller of AI implementation services. [Editorial policy and corrections]({base}#editorial).\n\n## Guide\n- [{guide['title']}]({base})\n- [{sheet['title']}]({base}worksheet/)\n- [{article['title']}]({base}{article['slug']}/)\n\n## Provider sources\n" + '\n'.join(sources) + '\n')
 
 
 if __name__ == '__main__':

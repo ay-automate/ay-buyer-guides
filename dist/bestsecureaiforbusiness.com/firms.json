@@ -22,6 +22,8 @@
   "guide": "Secure AI for Business",
   "publisher": "AY Automate",
   "methodology": "Each product has published material on a specific control. Inclusion describes that scope. Security outcomes depend on configuration, coverage and your own evaluation.",
+  "editorial_policy": "https://bestsecureaiforbusiness.com/#editorial",
+  "commercial_relationship": "The publisher sells AI implementation services.",
   "questions": [
     "Draw where prompts, files and responses go, including logs, backups and subprocessors.",
     "Test the proposed policy with a synthetic sensitive record. Check the audit event and who can read it.",

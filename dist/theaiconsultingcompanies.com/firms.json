@@ -22,6 +22,8 @@
   "guide": "AI Consulting Companies",
   "publisher": "AY Automate",
   "methodology": "Assess whether your own team can operate the delivered application. Ask every candidate to stage one buyer-led exercise using a company-owned account; document the access, instructions and fallback support it requires.",
+  "editorial_policy": "https://theaiconsultingcompanies.com/#editorial",
+  "commercial_relationship": "The publisher sells AI implementation services.",
   "questions": [
     "If your engineers will take over, ask for a sample repository, runbook and handover schedule.",
     "If the provider will operate the system, agree on incident coverage, escalation and the cost of changes.",
@@ -57,7 +59,7 @@
       "id": "ay",
       "name": "AY Automate",
       "specialty": "Workflow implementation",
-      "note": "Builds AI automations and publishes delivery case studies. Have a business reviewer resolve a synthetic document exception, then show where the operator can audit the decision.",
+      "note": "Builds AI automations and publishes delivery case studies. Have a business reviewer resolve a synthetic document exception, then show where the operator can audit the decision. This provider publishes the guide.",
       "source": "https://www.ayautomate.com/case-studies",
       "profile": "https://theaiconsultingcompanies.com/#firm-ay"
     },

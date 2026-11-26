@@ -2,7 +2,7 @@
 
 > A risk register, a content filter and a runtime inspection tool answer different questions. Map your data path first, then buy the control that covers the gap.
 
-Published by AY Automate.
+Published by AY Automate, a seller of AI implementation services. [Editorial policy and corrections](https://bestsecureaiforbusiness.com/#editorial).
 
 ## Guide
 - [How to compare AI security controls](https://bestsecureaiforbusiness.com/)

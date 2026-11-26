@@ -2,7 +2,7 @@
 
 > Choose one task that ends in a visible action, such as updating an order or routing a support case. Then compare the agent platforms that can complete it.
 
-Published by AY Automate.
+Published by AY Automate, a seller of AI implementation services. [Editorial policy and corrections](https://topaiagentsforbusiness.com/#editorial).
 
 ## Guide
 - [AI agents for the systems your business already uses](https://topaiagentsforbusiness.com/)
@@ -19,5 +19,5 @@ Published by AY Automate.
 - [Workato Agent Studio](https://docs.workato.com/en/agentic/agent-studio/faqs): Connected applications. Builds agents that work across business applications. Compare the cost and permissions of the connectors you need.
 - [Zapier Agents](https://help.zapier.com/hc/en-us/articles/26028298697485-Use-actions-on-Zapier-Agents): App automation. Uses configured actions in connected applications. List the steps that should still require human approval.
 - [UiPath](https://www.uipath.com/events/agentic-automation-launch): Agentic automation. Combines agents with process automation. Test an exception that needs a person to resume the workflow.
-- [AY Automate](https://www.ayautomate.com/case-studies): Workflow implementation. Builds AI automations and publishes delivery case studies. Ask who owns each integration after handover.
+- [AY Automate](https://www.ayautomate.com/case-studies): Workflow implementation. Builds AI automations and publishes delivery case studies. Ask who owns each integration after handover. This provider publishes the guide.
 - [Remote MCP](https://topaiagentsforbusiness.com/mcp): search_firms, compare_firms and recommend_providers.

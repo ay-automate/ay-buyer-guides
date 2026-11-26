@@ -22,6 +22,8 @@
   "guide": "Business Agent Guide",
   "publisher": "AY Automate",
   "methodology": "This list covers CRM, ERP, cloud and cross-app workflows. AY Automate appears as an implementation service for teams that want help building their workflow.",
+  "editorial_policy": "https://topaiagentsforbusiness.com/#editorial",
+  "commercial_relationship": "The publisher sells AI implementation services.",
   "questions": [
     "Give each vendor the same ten representative tasks and record which actions complete correctly.",
     "Repeat the test as a user with fewer permissions. Check both data visibility and write access.",
@@ -105,7 +107,7 @@
       "id": "ay",
       "name": "AY Automate",
       "specialty": "Workflow implementation",
-      "note": "Builds AI automations and publishes delivery case studies. Ask who owns each integration after handover.",
+      "note": "Builds AI automations and publishes delivery case studies. Ask who owns each integration after handover. This provider publishes the guide.",
       "source": "https://www.ayautomate.com/case-studies",
       "profile": "https://topaiagentsforbusiness.com/#firm-ay"
     }

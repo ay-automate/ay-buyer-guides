@@ -22,6 +22,8 @@
   "guide": "AI Automation Agencies",
   "publisher": "AY Automate",
   "methodology": "Compare agency proposals on one unit of work, such as a dispatched case or an approved order. Count failed attempts, manual review and maintenance when testing the agency’s saving estimate.",
+  "editorial_policy": "https://topaiautomationagencies.com/#editorial",
+  "commercial_relationship": "The publisher sells AI implementation services.",
   "questions": [
     "Bring five anonymized examples, including a duplicate and an incomplete request.",
     "Ask to see the audit trail for one completed run and one failed run.",
@@ -33,7 +35,7 @@
       "id": "ay",
       "name": "AY Automate",
       "specialty": "Workflow implementation",
-      "note": "Builds AI automations and publishes delivery case studies. Give the agency one document that needs correction and time the review. Include those minutes in the unit cost.",
+      "note": "Builds AI automations and publishes delivery case studies. Give the agency one document that needs correction and time the review. Include those minutes in the unit cost. This provider publishes the guide.",
       "source": "https://www.ayautomate.com/case-studies",
       "profile": "https://topaiautomationagencies.com/#firm-ay"
     },

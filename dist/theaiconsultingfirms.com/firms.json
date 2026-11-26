@@ -22,6 +22,8 @@
   "guide": "AI Consulting Firms",
   "publisher": "AY Automate",
   "methodology": "Evaluate each firm as a bidder. Give finalists the same scenario and request documentary evidence for staffing, commercial scope and acceptance. Record an unanswered condition separately from a scored answer.",
+  "editorial_policy": "https://theaiconsultingfirms.com/#editorial",
+  "commercial_relationship": "The publisher sells AI implementation services.",
   "questions": [
     "Ask for named delivery leads, their allocation and any subcontracted work.",
     "Request a reference in a similar operating environment. Ask the client what happened after go-live.",
@@ -89,7 +91,7 @@
       "id": "ay",
       "name": "AY Automate",
       "specialty": "Workflow implementation",
-      "note": "Builds AI automations and publishes delivery case studies. Ask which party owns the labeled examples and how the bidder will document reviewer overrides during acceptance.",
+      "note": "Builds AI automations and publishes delivery case studies. Ask which party owns the labeled examples and how the bidder will document reviewer overrides during acceptance. This provider publishes the guide.",
       "source": "https://www.ayautomate.com/case-studies",
       "profile": "https://theaiconsultingfirms.com/#firm-ay"
     },

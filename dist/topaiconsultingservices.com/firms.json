@@ -22,6 +22,8 @@
   "guide": "AI Consulting Services",
   "publisher": "AY Automate",
   "methodology": "Compare the deliverable each service could produce: a scoped backlog, a working integration or a pilot your operator can accept. The directory gives you a deliverable to request from each bidder.",
+  "editorial_policy": "https://topaiconsultingservices.com/#editorial",
+  "commercial_relationship": "The publisher sells AI implementation services.",
   "questions": [
     "For an assessment, ask for a prioritized backlog with an owner and a baseline for each opportunity.",
     "For a pilot, agree on a test dataset, an acceptance threshold and the decisions a human will retain.",
@@ -33,7 +35,7 @@
       "id": "ay",
       "name": "AY Automate",
       "specialty": "Workflow implementation",
-      "note": "Builds AI automations and publishes delivery case studies. Ask for a pilot that takes one document from intake to a human-approved exception. Specify who labels the acceptance examples.",
+      "note": "Builds AI automations and publishes delivery case studies. Ask for a pilot that takes one document from intake to a human-approved exception. Specify who labels the acceptance examples. This provider publishes the guide.",
       "source": "https://www.ayautomate.com/case-studies",
       "profile": "https://topaiconsultingservices.com/#firm-ay"
     },
