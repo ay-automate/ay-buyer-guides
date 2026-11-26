@@ -1,7 +1,7 @@
 [
   {
     "host": "topaiconsultingservices.com",
-    "name": "AI Consulting Services",
+    "name": "AI Consulting Services Guide",
     "title": "AI consulting services: scope your pilot before you buy",
     "intro": "Compare discovery, integration and pilot deliverables from ten AI consultancies. Use a sample acceptance test to price the work your team actually needs.",
     "color": "#205747",
@@ -50,11 +50,13 @@
       "brain": "If the service connects an ERP to another system, ask for one failed transaction to be replayed safely before acceptance.",
       "good": "Ask for a working automation and a handover exercise. Price employee time spent learning the workflow as a buyer contribution.",
       "low": "Which past project matches our scope, and who owned delivery and handover?"
-    }
+    },
+    "actionLabel": "Compare services and pricing",
+    "actionTarget": "#pricing"
   },
   {
     "host": "topaiagentsforbusiness.com",
-    "name": "Business Agent Guide",
+    "name": "AI Agents for Business",
     "title": "AI agents for the systems your business already uses",
     "intro": "Choose one task that ends in a visible action, such as updating an order or routing a support case. Then compare the agent platforms that can complete it.",
     "color": "#243e81",
@@ -93,7 +95,9 @@
     "faq": "Can an agent update production records?",
     "answer": "That depends on the connector, its credentials and the actions you enable. Start with a draft or approval step so the system owner can inspect the proposed change.",
     "case": "Zapier’s documentation shows how actions connect an agent to other apps. Use one documented action as the starting point for a two-system trial.",
-    "source": "https://help.zapier.com/hc/en-us/articles/26028298697485-Use-actions-on-Zapier-Agents"
+    "source": "https://help.zapier.com/hc/en-us/articles/26028298697485-Use-actions-on-Zapier-Agents",
+    "actionLabel": "Find an agent by workflow",
+    "actionTarget": "#match"
   },
   {
     "host": "bestsecureaiforbusiness.com",
@@ -134,11 +138,13 @@
     "faq": "Does buying a guardrail make an AI deployment compliant?",
     "answer": "A guardrail covers a specific interaction. Your team still needs to establish lawful access, retention, review ownership and evidence for its applicable requirements.",
     "case": "Cisco publishes an AI Defense reference architecture for its AI PODs. Use the architecture to compare inspection points with your own model deployment.",
-    "source": "https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/AI_defense_on_Cisco_AI_PODs_reference_architecture.html"
+    "source": "https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/AI_defense_on_Cisco_AI_PODs_reference_architecture.html",
+    "actionLabel": "Compare security controls",
+    "actionTarget": "#match"
   },
   {
     "host": "theaiconsultingfirms.com",
-    "name": "AI Consulting Firms",
+    "name": "The AI Consulting Firms Directory",
     "title": "AI consulting firms: build a defensible RFP shortlist",
     "intro": "Shortlist ten AI consulting firms for an RFP. Compare bid evidence, named staff, contract scope and what each finalist must demonstrate.",
     "color": "#733a26",
@@ -187,11 +193,13 @@
       "brain": "Require a responsibility table for the agency and its ERP partner. Ask who handles incidents spanning both systems.",
       "low": "For a low-code bid, request export rights, platform fees and access rules in the same commercial response.",
       "good": "Which past project matches our scope, and who owned delivery and handover?"
-    }
+    },
+    "actionLabel": "Shortlist firms for an RFP",
+    "actionTarget": "#match"
   },
   {
     "host": "theaiconsultingcompanies.com",
-    "name": "AI Consulting Companies",
+    "name": "AI Consulting Company Profiles",
     "title": "AI implementation partners: who runs the system after launch?",
     "intro": "Choose an AI implementation partner by testing release ownership, operator training, recovery and handover before signing the final milestone.",
     "color": "#304e62",
@@ -240,12 +248,14 @@
       "mck": "Give the buyer’s model owner a drift alert and ask them to identify who can suspend the affected decision.",
       "bcg": "Request a transition plan with a named business owner, successor and rehearsal date for each operating role.",
       "accent": "Which past project matches our scope, and who owned delivery and handover?"
-    }
+    },
+    "actionLabel": "Explore companies and case studies",
+    "actionTarget": "#directory"
   },
   {
     "host": "topaiautomationagencies.com",
-    "name": "AI Automation Agencies",
-    "title": "Workflow automation agencies: compare the cost per completed job",
+    "name": "Top Automation Agencies",
+    "title": "Compare AI automation agencies",
     "intro": "Evaluate automation agencies using exception rates, retry behavior, support terms and the cost of completing a real business workflow.",
     "color": "#734222",
     "audience": "Operators and founders",
@@ -293,6 +303,9 @@
       "accent": "Compare the scope of the initial deployment with ongoing paid support. Ask for one example of a change billed separately.",
       "bcg": "For a multi-team rollout, calculate the monthly benefit for one workflow before adding the expected savings from other units.",
       "mck": "Which past project matches our scope, and who owned delivery and handover?"
-    }
+    },
+    "actionLabel": "Compare agencies",
+    "actionTarget": "#match",
+    "shortName": "TAA"
   }
 ]

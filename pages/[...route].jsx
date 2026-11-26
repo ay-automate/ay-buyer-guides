@@ -40,6 +40,7 @@ export default function Guide(props) {
       "@context": "https://schema.org",
       "@type": "WebSite",
       name: g.name,
+      ...(g.shortName ? { alternateName: g.shortName } : {}),
       url: base,
     },
   ];

@@ -1,4 +1,4 @@
-# Business Agent Guide
+# AI Agents for Business
 
 > Choose one task that ends in a visible action, such as updating an order or routing a support case. Then compare the agent platforms that can complete it.
 

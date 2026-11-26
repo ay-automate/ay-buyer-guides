@@ -1,4 +1,4 @@
-# AI Consulting Companies
+# AI Consulting Company Profiles
 
 > Choose an AI implementation partner by testing release ownership, operator training, recovery and handover before signing the final milestone.
 
