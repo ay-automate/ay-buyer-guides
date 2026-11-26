@@ -56,6 +56,11 @@ label{font-weight:650}.checks{padding:0;list-style:none}.checks li{padding:10px 
 code{overflow-wrap:anywhere}
 @media(max-width:800px){.hero{grid-template-columns:1fr  .85fr;gap:24px}.reading{grid-template-columns:minmax(0,1fr)}.reading>aside{position:static}.reading>aside nav{display:flex;gap:10px 20px;flex-wrap:wrap}#shortlist>ol{grid-template-columns:1fr}.board li{font-size:13px}}
 @media(max-width:620px){header{align-items:flex-start;flex-direction:column;gap:12px}nav{gap:15px}.hero,.grid,.resources,.fieldnotes{grid-template-columns:1fr}.hero{gap:24px;padding:29px 0}.board{padding:22px}.board li{grid-template-columns:10px .75fr 1fr}.reading{margin-top:27px;gap:20px}th,td{padding:8px 6px;font-size:14px}.brand img{width:29px;height:29px}.reading>aside nav a{font-size:13px}}
+@media(max-width:620px){
+  header{gap:4px;padding-bottom:8px}
+  header nav{column-gap:4px;row-gap:0}
+  header nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
+}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{body{background:white;font:11pt/1.4 sans-serif}header,main,footer{width:100%}header nav,.skip,.reading>aside,.board,.button,footer{display:none}.reading,.hero,.fieldnotes{display:block}.hero{padding:10px 0}.hero h1{font-size:25pt}.reading h2{font-size:17pt}section,.reading{margin:16px 0}tr,label,.fieldnotes div{break-inside:avoid}textarea{min-height:70px}.guidance,.example{border-left:1px solid #444;padding:12px}a{color:black}}
 .prompt{font-weight:700;margin:15px 0 4px}
