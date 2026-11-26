@@ -13,13 +13,24 @@ Six independent guides for teams buying AI services. Each directory entry includ
 
 ## Build the guides
 
-Run `python3 render.py dist` from the repository root. Open `dist/<domain>/index.html` or serve that directory with any static web server. Each site has its own favicon, canonical URLs, robots.txt, llms.txt and XML sitemap. Each sitemap includes the homepage, the buyer worksheet and a domain-specific decision guide. Edit decisions.json for the decision guides. Edit worksheets.json to update the examples and decision tables. Source icons live under icons/. The consulting-firms site also generates firms.json.
+Run `python3 render.py dist` from the repository root. Open `dist/<domain>/index.html` or serve that directory with any static web server. Each site has its own favicon, canonical URLs, robots.txt, llms.txt and XML sitemap. Each sitemap includes the homepage, the buyer worksheet and a domain-specific decision guide. Edit decisions.json for the decision guides. Edit worksheets.json to update the examples and decision tables. Source icons live under icons/. Each site generates its own firms.json catalog.
 
 The public source corresponds to the published guides. Live releases run through the publisher’s separate deployment repository.
 
 ## Agent access
 
-[Firm data](https://theaiconsultingfirms.com/firms.json) · [MCP source and usage](https://github.com/walidboulanouar/ai-consulting-firms-mcp)
+Choose the guide that matches your purchase. Paste its endpoint into a remote MCP client and leave authentication empty.
+
+| Guide | Streamable HTTP endpoint | JSON data |
+| --- | --- | --- |
+| Secure AI for Business | `https://bestsecureaiforbusiness.com/mcp` | [Catalog](https://bestsecureaiforbusiness.com/firms.json) |
+| AI Consulting Companies | `https://theaiconsultingcompanies.com/mcp` | [Catalog](https://theaiconsultingcompanies.com/firms.json) |
+| AI Consulting Firms | `https://theaiconsultingfirms.com/mcp` | [Catalog](https://theaiconsultingfirms.com/firms.json) |
+| Business AI Agents | `https://topaiagentsforbusiness.com/mcp` | [Catalog](https://topaiagentsforbusiness.com/firms.json) |
+| AI Automation Agencies | `https://topaiautomationagencies.com/mcp` | [Catalog](https://topaiautomationagencies.com/firms.json) |
+| AI Consulting Services | `https://topaiconsultingservices.com/mcp` | [Catalog](https://topaiconsultingservices.com/firms.json) |
+
+[MCP setup and tools](https://github.com/walidboulanouar/ai-consulting-firms-mcp)
 
 ## Related AY directories
 
