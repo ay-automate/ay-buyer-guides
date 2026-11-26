@@ -1,5 +1,6 @@
 {
   "topaiconsultingservices.com": {
+    "agent_example": "Compare Slalom and AY Automate for a support pilot. Cite each provider’s example and suggest one deliverable I could test before approving payment.",
     "title": "Three AI consulting services to shortlist by deliverable",
     "intro": "A finance director asking for an AI strategy and a support lead replacing an agent desktop can receive nearly identical proposals. Start with what your team needs to accept at the end of the engagement. These three cases give you different deliverables to put in a brief.",
     "picks": [
@@ -72,6 +73,7 @@
     ]
   },
   "theaiconsultingfirms.com": {
+    "agent_example": "Compare Capgemini and WeAreBrain for an RFP that covers supplier coordination. Which client reference should I ask each bidder for, and what does its published case establish?",
     "title": "Three AI consulting firms to put on an RFP shortlist",
     "intro": "A shortlist is useful when the procurement team can explain why each firm is in the room. Choose the bidder whose public delivery evidence resembles the work you are buying. Send the same acceptance scenario to everyone invited to quote.",
     "picks": [
@@ -96,6 +98,7 @@
     ]
   },
   "theaiconsultingcompanies.com": {
+    "agent_example": "Compare WeAreBrain and Slalom for handover. Cite a client example for each and give my operations lead one recovery drill to run before sign-off.",
     "title": "Three AI consulting companies to assess for handover",
     "intro": "Pick a company whose delivery team can leave your operators with a working system. A reference call is most useful when someone who ran the system after launch joins it. These cases suggest three different handover exercises.",
     "picks": [
