@@ -99,8 +99,8 @@
       "id": "ui",
       "name": "UiPath",
       "specialty": "Agentic automation",
-      "note": "Combines agents with process automation. Test an exception that needs a person to resume the workflow.",
-      "source": "https://www.uipath.com/events/agentic-automation-launch",
+      "note": "UiPath Maestro Orchestrate coordinates tasks across agents, robots and people. Test an exception that needs a person to resume the workflow.",
+      "source": "https://docs.uipath.com/maestro/automation-cloud/latest/user-guide/overview",
       "profile": "https://topaiagentsforbusiness.com/#firm-ui"
     },
     {

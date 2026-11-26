@@ -284,6 +284,6 @@
     ],
     "decision": "Review the last three production changes with your operations lead. Price those actual changes under each proposal. If the cheaper agreement depends on never changing a supplier field or an approval rule, take that assumption back to the agency before you sign.",
     "source": "n8n documentation on queue-mode components and workers",
-    "url": "https://docs.n8n.io/hosting/scaling/queue-mode/"
+    "url": "https://docs.n8n.io/deploy/host-n8n/configure-n8n/scaling/enable-queue-mode"
   }
 }
